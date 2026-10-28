@@ -1,0 +1,496 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Dark mode variant */
+@custom-variant dark (&:is(.dark *));
+
+/* =========================
+   THEME TOKENS (shadcn)
+========================= */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-light: var(--light);
+  --color-light-dark: var(--light-dark);
+  --color-light-silver: var(--light-silver);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-dark: var(--secondary-dark);
+  --color-secondary-gary: var(--secondary-gray);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+}
+
+/* =========================
+   LIGHT THEME
+========================= */
+:root {
+  /* Poppins for Latin; Bangla text falls through to Hind Siliguri (Bengali glyphs only). */
+  font-family: var(--font-poppins), var(--font-bangla), sans-serif;
+  --radius: 0.625rem;
+
+  --light: #f7f7f7;
+  --light-dark: #eeeeee;
+  --light-silver: #e0e0e0;
+
+  --background: #ffffff;
+  --foreground: oklch(0.18 0 0);
+
+  --primary: #009dab;
+  --primary-light: #009aa0;
+  --primary-foreground: oklch(0.985 0 0);
+
+  --secondary: #05185a;
+  --secondary-dark: #0f0e40;
+  --secondary-gray: #545454;
+  --secondary-foreground: #5c5c5c;
+
+  --light-blue: "#EFF3F4", --accent: oklch(0.96 0.04 205);
+  --accent-foreground: #05185a;
+
+  --muted: oklch(0.96 0 0);
+  --muted-foreground: oklch(0.45 0 0);
+
+  --border: oklch(0.88 0 0);
+  --input: oklch(0.88 0 0);
+  --ring: oklch(0.78 0.06 205);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0 0);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0 0);
+
+  --destructive: oklch(0.577 0.245 27.325);
+}
+
+/* =========================
+   DARK THEME
+========================= */
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+
+  --light: #f7f7f7;
+  --light-dark: #eeeeee;
+  --light-silver: #e0e0e0;
+
+  --primary: #00b6c7;
+  --primary-light: #009aa0;
+  --primary-foreground: oklch(0.18 0 0);
+
+  --secondary: #1b3478;
+  --secondary-dark: #0f0e40;
+  --secondary-foreground: #5c5c5c;
+  --secondary-gray: #545454;
+
+  --light-blue: "#EFF3F4", --accent: oklch(0.25 0.05 205);
+  --accent-foreground: oklch(0.985 0 0);
+
+  --muted: oklch(0.25 0 0);
+  --muted-foreground: oklch(0.7 0 0);
+
+  --border: rgba(255, 255, 255, 0.12);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.7 0.14 205);
+
+  --card: oklch(0.2 0 0);
+  --card-foreground: oklch(0.985 0 0);
+
+  --popover: oklch(0.2 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+}
+
+/* =========================
+   BASE STYLES
+========================= */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  /* Tailwind v4 no longer gives buttons a pointer cursor; restore it for anything clickable. */
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  select,
+  label[for] {
+    cursor: pointer;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+/* =========================
+   FLUID TYPE
+   Scales linearly from a 320px phone to the md breakpoint (768px),
+   where it lands on the matching fixed size (fluid-5xl → 3rem, etc).
+========================= */
+@theme {
+  --text-fluid-xl: clamp(1.125rem, 1.036rem + 0.446vw, 1.25rem); /* 18 → 20px */
+  --text-fluid-xl--line-height: 1.375;
+  --text-fluid-3xl: clamp(1.375rem, 1.018rem + 1.786vw, 1.875rem); /* 22 → 30px */
+  --text-fluid-3xl--line-height: 1.2;
+  --text-fluid-4xl: clamp(1.625rem, 1.179rem + 2.232vw, 2.25rem); /* 26 → 36px */
+  --text-fluid-4xl--line-height: 1.15;
+  --text-fluid-5xl: clamp(1.875rem, 1.071rem + 4.018vw, 3rem); /* 30 → 48px */
+  --text-fluid-5xl--line-height: 1.1;
+  --text-fluid-6xl: clamp(2rem, 0.75rem + 6.25vw, 3.75rem); /* 32 → 60px */
+  --text-fluid-6xl--line-height: 1.05;
+}
+
+/* =========================
+   CONTAINER (1400px)
+========================= */
+@utility container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1400px;
+    padding-inline: 0;
+  }
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes hero-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 15s linear infinite;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 15s linear infinite;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slide-left {
+  animation: slide-left 30s linear infinite;
+}
+
+/* Turf "How it works" cards: pitch lines redraw on hover (paths use pathLength="1"). */
+@keyframes pitch-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.tiptap {
+  :first-child {
+    margin-top: 0;
+  }
+  ul,
+  ol {
+    padding: 0 1rem;
+    margin: 1.25rem 1rem 1.25rem 0.4rem;
+
+    li p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+  }
+}
+
+.ProseMirror ul {
+  list-style-type: disc;
+  margin-left: 1.25rem;
+  padding-left: 0;
+}
+
+.ProseMirror ol {
+  list-style-type: decimal;
+  margin-left: 1.25rem;
+  padding-left: 0;
+}
+
+.ProseMirror li {
+  margin-bottom: 0.25rem;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+/* Firefox */
+input[type="time"]::-moz-clear {
+  display: none;
+}
+input[type="time"]::-moz-inner-spin-button {
+  display: none;
+}
+
+/* .sr-only:focus {
+  position: absolute;
+  width: auto;
+  height: auto;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  border-radius: 1px solid red;
+} */
+
+/* =========================
+   PROSE LIST STYLING
+========================= */
+.prose ul,
+.prose ol {
+  padding-left: 2rem;
+}
+
+.prose ul {
+  list-style-type: disc;
+}
+
+.prose ol {
+  list-style-type: decimal;
+}
+
+.prose li {
+  color: var(--secondary-foreground);
+  margin-bottom: 0.25rem;
+}
+
+.prose ul li::marker,
+.prose ol li::marker {
+  color: var(--secondary-foreground);
+}
+
+/* =========================
+   SMOOTH SECTION SCROLLING
+========================= */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* =========================
+   AGENCY HERO SVG ANIMATION
+========================= */
+@keyframes agency-grid-drift {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(64px, 64px);
+  }
+}
+
+@keyframes agency-blob-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+.agency-grid-drift {
+  animation: agency-grid-drift 16s linear infinite;
+}
+
+.agency-blob-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: agency-blob-pulse 8s ease-in-out infinite;
+}
+
+.agency-blob-pulse-delayed {
+  animation-delay: 1.2s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .agency-grid-drift,
+  .agency-blob-pulse {
+    animation: none;
+  }
+}
+
+/* =========================
+   ANCHOR SCROLL OFFSET
+   keeps sections clear of the fixed header when jumped to via nav links
+========================= */
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* =========================
+   BENGALI TYPOGRAPHY
+   Bengali conjuncts/matras need extra line-height to stay readable
+========================= */
+.text-bn,
+[lang="bn"] {
+  line-height: 1.85;
+}
+
+/* =========================
+   AGENCY GLASSMORPHISM
+   frosted surfaces for the dark agency pages — lives in the components layer
+   so any Tailwind utility (bg-*, border-*, shadow-*) on the element overrides it
+========================= */
+@layer components {
+  .glass {
+    background-color: rgb(255 255 255 / 0.045);
+    border: 1px solid rgb(255 255 255 / 0.1);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    backdrop-filter: blur(20px) saturate(160%);
+    box-shadow:
+      inset 0 1px 0 0 rgb(255 255 255 / 0.08),
+      0 24px 48px -24px rgb(0 0 0 / 0.6);
+  }
+
+  .glass-strong {
+    background-color: rgb(255 255 255 / 0.08);
+    border: 1px solid rgb(255 255 255 / 0.14);
+    -webkit-backdrop-filter: blur(28px) saturate(180%);
+    backdrop-filter: blur(28px) saturate(180%);
+    box-shadow:
+      inset 0 1px 0 0 rgb(255 255 255 / 0.12),
+      0 30px 60px -24px rgb(0 0 0 / 0.65);
+  }
+}
+
+/* Payments money cards: on hover, an animated SVG backdrop behind each icon — a turning dashed ring and soft ripples. */
+@keyframes tw-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes tw-ripple {
+  0% {
+    opacity: 0.28;
+    transform: scale(0.55);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+}
+
+/* Still until the card is hovered (or focused within), then the backdrop comes alive. */
+.tw-spin,
+.tw-ripple {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .group:hover .tw-spin,
+  .group:focus-within .tw-spin {
+    animation: tw-spin 6s linear infinite;
+  }
+
+  .group:hover .tw-ripple,
+  .group:focus-within .tw-ripple {
+    animation: tw-ripple 1.8s ease-out infinite;
+  }
+}
+
+/* Thin 3px scrollbars everywhere (modals, panels, tables, page).
+   Chrome/Safari use the ::-webkit rules; setting scrollbar-width there would override them,
+   so the standard properties go to Firefox only (it has no exact width — "thin" is closest). */
+@supports not selector(::-webkit-scrollbar) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(163 163 163 / 0.7) transparent;
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgb(163 163 163 / 0.7);
+  border-radius: 9999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgb(115 115 115);
+}
