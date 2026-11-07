@@ -158,9 +158,17 @@
 @theme {
   --text-fluid-xl: clamp(1.125rem, 1.036rem + 0.446vw, 1.25rem); /* 18 → 20px */
   --text-fluid-xl--line-height: 1.375;
-  --text-fluid-3xl: clamp(1.375rem, 1.018rem + 1.786vw, 1.875rem); /* 22 → 30px */
+  --text-fluid-3xl: clamp(
+    1.375rem,
+    1.018rem + 1.786vw,
+    1.875rem
+  ); /* 22 → 30px */
   --text-fluid-3xl--line-height: 1.2;
-  --text-fluid-4xl: clamp(1.625rem, 1.179rem + 2.232vw, 2.25rem); /* 26 → 36px */
+  --text-fluid-4xl: clamp(
+    1.625rem,
+    1.179rem + 2.232vw,
+    2.25rem
+  ); /* 26 → 36px */
   --text-fluid-4xl--line-height: 1.15;
   --text-fluid-5xl: clamp(1.875rem, 1.071rem + 4.018vw, 3rem); /* 30 → 48px */
   --text-fluid-5xl--line-height: 1.1;
@@ -539,6 +547,16 @@ section[id] {
   animation: tw-glyph-float 3s ease-in-out infinite;
 }
 
+@keyframes tw-dash {
+  to {
+    stroke-dashoffset: -48;
+  }
+}
+
+.tw-dash {
+  animation: tw-dash 4s linear infinite;
+}
+
 /* Header bell wiggles when unread notifications arrive. */
 @keyframes bell-ring {
   0%,
@@ -565,7 +583,8 @@ section[id] {
 @media (prefers-reduced-motion: reduce) {
   .tw-ripple,
   .tw-spin,
-  .tw-float {
+  .tw-float,
+  .tw-dash {
     animation: none;
   }
 }

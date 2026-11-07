@@ -44,13 +44,27 @@ export const ADMIN_NAV: { title: string; items: NavItem[] }[] = [
   {
     title: "Website",
     items: [
-      { href: ROUTES.adminContent, label: "Content", icon: LayoutTemplate },
-      { href: ROUTES.adminGallery, label: "Gallery", icon: ImageIcon },
+      {
+        href: ROUTES.adminContent,
+        label: "Content",
+        icon: LayoutTemplate,
+      },
+      {
+        href: ROUTES.adminGallery,
+        label: "Gallery",
+        icon: ImageIcon,
+      },
     ],
   },
   {
     title: "System",
-    items: [{ href: ROUTES.adminSettings, label: "Settings", icon: Settings }],
+    items: [
+      {
+        href: ROUTES.adminSettings,
+        label: "Settings",
+        icon: Settings,
+      },
+    ],
   },
 ];
 

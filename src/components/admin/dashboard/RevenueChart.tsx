@@ -10,8 +10,9 @@ import {
   YAxis,
 } from "recharts";
 import { dateLabel, taka } from "@/src/lib/format";
+import { TrendingUp } from "lucide-react";
 import { useT } from "@/src/lib/i18n";
-import { axis, CHART_GREEN, ChartCard, ChartTooltip } from "./ChartCard";
+import { axis, ChartCard, ChartTooltip } from "./ChartCard";
 import { REVENUE_DAYS, type RevenuePoint } from "./useDashboardData";
 
 const compact = (n: number) =>
@@ -32,6 +33,8 @@ export function RevenueChart({
       subtitle={t("Net takings, last {n} days", { n: REVENUE_DAYS })}
       figure={taka(total)}
       table={data.map((d) => [d.label, taka(d.amount)])}
+      icon={TrendingUp}
+      accent="from-emerald-500 to-teal-600"
     >
       <ResponsiveContainer width="100%" height="100%">
         <AreaChart
@@ -40,8 +43,12 @@ export function RevenueChart({
         >
           <defs>
             <linearGradient id="revenue-fill" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor={CHART_GREEN} stopOpacity={0.22} />
-              <stop offset="100%" stopColor={CHART_GREEN} stopOpacity={0} />
+              <stop offset="0%" stopColor="#14b8a6" stopOpacity={0.35} />
+              <stop offset="100%" stopColor="#06b6d4" stopOpacity={0} />
+            </linearGradient>
+            <linearGradient id="revenue-line" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stopColor="#10b981" />
+              <stop offset="100%" stopColor="#0891b2" />
             </linearGradient>
           </defs>
           <CartesianGrid
@@ -75,15 +82,15 @@ export function RevenueChart({
           <Area
             type="monotone"
             dataKey="amount"
-            stroke={CHART_GREEN}
-            strokeWidth={2}
+            stroke="url(#revenue-line)"
+            strokeWidth={2.5}
             fill="url(#revenue-fill)"
             dot={false}
             activeDot={{
               r: 5,
               strokeWidth: 2,
               stroke: "#fff",
-              fill: CHART_GREEN,
+              fill: "#0d9488",
             }}
             animationDuration={900}
           />

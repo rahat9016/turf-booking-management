@@ -4,15 +4,17 @@ import {
   Bar,
   BarChart,
   CartesianGrid,
+  Cell,
   ReferenceArea,
   ResponsiveContainer,
   Tooltip,
   XAxis,
   YAxis,
 } from "recharts";
+import { Clock } from "lucide-react";
 import { hourLabel } from "@/src/lib/format";
 import { useT } from "@/src/lib/i18n";
-import { axis, CHART_GREEN, ChartCard, ChartTooltip } from "./ChartCard";
+import { axis, ChartCard, ChartTooltip, LegendItem } from "./ChartCard";
 import { HOURS_DAYS, type HourPoint } from "./useDashboardData";
 
 /** How often each hour of the day was booked; the peak-price hours are shaded. */
@@ -38,6 +40,20 @@ export function BusyHoursChart({
       })}
       figure={hrs(total)}
       table={data.map((d) => [hourLabel(d.hour), hrs(d.games)])}
+      icon={Clock}
+      accent="from-sky-500 to-indigo-600"
+      legend={
+        <>
+          <LegendItem
+            swatch="from-teal-300 to-teal-500"
+            label={t("Off-peak")}
+          />
+          <LegendItem
+            swatch="from-indigo-400 to-indigo-600"
+            label={t("Peak from {time}", { time: hourLabel(peakStartHour) })}
+          />
+        </>
+      }
     >
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
@@ -50,20 +66,22 @@ export function BusyHoursChart({
             stroke={axis.stroke}
             strokeDasharray="3 4"
           />
+          <defs>
+            <linearGradient id="bar-offpeak" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#5eead4" />
+              <stop offset="100%" stopColor="#14b8a6" />
+            </linearGradient>
+            <linearGradient id="bar-peak" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#818cf8" />
+              <stop offset="100%" stopColor="#4f46e5" />
+            </linearGradient>
+          </defs>
           {firstPeak && (
             <ReferenceArea
               x1={firstPeak.label}
               x2={lastLabel}
-              fill="#84cc16"
-              fillOpacity={0.08}
-              label={{
-                value: t("Peak from {time}", {
-                  time: hourLabel(peakStartHour),
-                }),
-                position: "insideTopLeft",
-                fill: "#4d7c0f",
-                fontSize: 11,
-              }}
+              fill="#6366f1"
+              fillOpacity={0.06}
             />
           )}
           <XAxis
@@ -74,7 +92,7 @@ export function BusyHoursChart({
           />
           <YAxis {...axis} width={40} allowDecimals={false} />
           <Tooltip
-            cursor={{ fill: "#f5f5f5" }}
+            cursor={{ fill: "#fafaf9" }}
             content={({ active, payload }) => {
               const p = payload?.[0]?.payload as HourPoint | undefined;
               return active && p ? (
@@ -87,11 +105,17 @@ export function BusyHoursChart({
           />
           <Bar
             dataKey="games"
-            fill={CHART_GREEN}
             radius={[4, 4, 0, 0]}
             maxBarSize={28}
             animationDuration={900}
-          />
+          >
+            {data.map((d) => (
+              <Cell
+                key={d.hour}
+                fill={d.peak ? "url(#bar-peak)" : "url(#bar-offpeak)"}
+              />
+            ))}
+          </Bar>
         </BarChart>
       </ResponsiveContainer>
     </ChartCard>

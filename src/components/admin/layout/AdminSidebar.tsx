@@ -23,24 +23,37 @@ export function AdminSidebar({
 }) {
   const t = useT();
   const footerLink = cn(
-    "rounded-md text-sm text-emerald-100/80 hover:bg-white/5 hover:text-white",
+    "rounded-lg text-sm text-emerald-50/70 hover:bg-emerald-400/10 hover:text-white",
     rail
       ? "flex flex-col items-center gap-1 px-0.5 py-1.5 text-[10px]"
       : "flex h-11 items-center gap-3 px-4"
   );
 
   return (
-    <nav className="flex h-full flex-col">
+    <nav className="relative flex h-full flex-col overflow-hidden">
+      {/* Soft coloured glows behind the menu. */}
+      <span
+        aria-hidden
+        className="pointer-events-none absolute -left-16 -top-20 size-56 rounded-full bg-emerald-400/15 blur-3xl"
+      />
+      <span
+        aria-hidden
+        className="pointer-events-none absolute -right-20 top-1/3 size-56 rounded-full bg-teal-400/10 blur-3xl"
+      />
+      <span
+        aria-hidden
+        className="pointer-events-none absolute -bottom-16 -left-10 size-56 rounded-full bg-teal-400/10 blur-3xl"
+      />
       <Link
         href={ROUTES.adminDashboard}
         onClick={onNavigate}
         className={cn(
-          "block",
+          "relative block",
           rail ? "px-2 pb-1 pt-5 text-center" : "px-6 pb-1 pt-6"
         )}
       >
         {rail ? (
-          <span className="text-xl font-extrabold text-lime-400">
+          <span className="text-xl font-extrabold text-emerald-400">
             T<span className="text-white">H</span>
           </span>
         ) : (
@@ -49,7 +62,7 @@ export function AdminSidebar({
       </Link>
       <div
         className={cn(
-          "mt-5 flex-1 overflow-y-auto pb-4",
+          "relative mt-5 flex-1 overflow-y-auto pb-4",
           rail ? "space-y-2 px-1.5" : "space-y-6 px-4"
         )}
       >
@@ -59,7 +72,7 @@ export function AdminSidebar({
             className={cn(rail && gi > 0 && "border-t border-white/10 pt-2")}
           >
             {!rail && (
-              <p className="px-4 pb-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-emerald-200/40">
+              <p className="px-4 pb-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-emerald-300/60">
                 {t(g.title)}
               </p>
             )}
@@ -79,7 +92,7 @@ export function AdminSidebar({
       </div>
       <div
         className={cn(
-          "space-y-0.5 border-t border-white/10",
+          "relative space-y-0.5 border-t border-white/10",
           rail ? "p-1.5" : "p-4"
         )}
       >
@@ -121,10 +134,8 @@ function SidebarLink({
   const active = isActive(item.href, pathname);
   const badgeTone =
     item.badge === "refunds"
-      ? "bg-violet-500 text-white"
-      : active
-        ? "bg-emerald-700 text-white"
-        : "bg-emerald-500 text-white";
+      ? "bg-indigo-400 text-white"
+      : "bg-emerald-400 text-emerald-950";
   return (
     <li>
       <Link
@@ -135,20 +146,22 @@ function SidebarLink({
         className={cn(
           "rounded-md text-sm transition",
           rail
-            ? "flex h-15 flex-col items-center justify-center gap-1 px-0.5 text-center"
-            : "flex h-12 items-center gap-3 rounded-lg px-4 text-[15px]",
+            ? "flex h-16 flex-col items-center justify-center gap-1 px-0.5 text-center"
+            : "flex h-12 items-center gap-3 rounded-xl px-2.5 text-[15px]",
           active
-            ? "bg-white font-semibold text-emerald-950 shadow-sm"
-            : "text-emerald-100/80 hover:bg-white/5 hover:text-white"
+            ? "bg-gradient-to-r from-emerald-400/25 to-teal-400/5 font-semibold text-white ring-1 ring-inset ring-emerald-300/25"
+            : "text-white/85 hover:bg-emerald-400/10 hover:text-white"
         )}
       >
-        <span className="relative">
-          <item.icon
-            className={cn(
-              rail ? "size-5" : "size-[18px]",
-              active && "text-emerald-700"
-            )}
-          />
+        <span
+          className={cn(
+            "relative flex size-8 shrink-0 items-center justify-center rounded-lg transition",
+            active
+              ? "bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-md"
+              : "bg-white/[0.07] text-emerald-300 ring-1 ring-white/10"
+          )}
+        >
+          <item.icon className="size-[18px]" />
           {rail && count > 0 && (
             <span
               className={cn(

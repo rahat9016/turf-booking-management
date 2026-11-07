@@ -28,22 +28,25 @@ export function Dashboard() {
           icon="wallet"
           tone="green"
           index={0}
+          solid
         />
         <StatCard
           label="Games today"
           value={String(s.todayGames)}
           hint={t("{n} still to play", { n: s.gamesLeft })}
           icon={CalendarCheck2}
-          tone="sky"
+          tone="teal"
           index={1}
+          solid
         />
         <StatCard
           label="Ground booked today"
           value={`${s.occupancy}%`}
           hint={t("{a} of {b} hours", { a: s.bookedHours, b: s.openHours })}
           icon={Gauge}
-          tone="violet"
+          tone="sky"
           index={2}
+          solid
         />
         <StatCard
           label="To collect"
@@ -52,8 +55,9 @@ export function Dashboard() {
             n: s.dueCount,
           })}
           icon="bill"
-          tone="rose"
+          tone="indigo"
           index={3}
+          solid
         />
       </div>
 

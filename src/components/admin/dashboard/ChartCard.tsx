@@ -3,6 +3,7 @@
 import type { ReactNode } from "react";
 import { useT } from "@/src/lib/i18n";
 import { cn } from "@/src/lib/utils";
+import type { IconType } from "@/src/types";
 import { cardClass } from "../ui";
 
 /** Card around one chart: title and headline figure on top, the plot, and a screen-reader table of the same data. */
@@ -11,6 +12,9 @@ export function ChartCard({
   subtitle,
   figure,
   table,
+  icon: Icon,
+  accent,
+  legend,
   className,
   children,
 }: {
@@ -20,24 +24,55 @@ export function ChartCard({
   figure: string;
   /** Rows for the hidden data table: [label, value]. */
   table: [string, string][];
+  icon: IconType;
+  /** Gradient classes for the icon chip and the top edge, e.g. "from-emerald-500 to-teal-500". */
+  accent: string;
+  /** Key under the header, for charts with more than one colour. */
+  legend?: ReactNode;
   className?: string;
   children: ReactNode;
 }) {
   const t = useT();
   return (
     <section
-      className={cn(cardClass, "flex min-w-0 flex-col p-4 sm:p-5", className)}
+      className={cn(
+        cardClass,
+        "relative flex min-w-0 flex-col overflow-hidden p-4 sm:p-5",
+        className
+      )}
     >
+      <span
+        aria-hidden
+        className={cn("absolute inset-x-0 top-0 h-1 bg-gradient-to-r", accent)}
+      />
       <div className="flex items-start justify-between gap-3">
-        <div className="min-w-0">
-          <h2 className="font-semibold text-neutral-900">{t(title)}</h2>
-          <p className="mt-0.5 text-[13px] text-neutral-500">{subtitle}</p>
+        <div className="flex min-w-0 items-start gap-3">
+          <span
+            className={cn(
+              "flex size-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br text-white shadow-md",
+              accent
+            )}
+          >
+            <Icon className="size-5" />
+          </span>
+          <div className="min-w-0">
+            <h2 className="font-semibold text-neutral-900">{t(title)}</h2>
+            <p className="mt-0.5 text-[13px] text-neutral-500">{subtitle}</p>
+          </div>
         </div>
         <p className="shrink-0 text-xl font-bold tabular-nums tracking-tight text-neutral-900 sm:text-2xl">
           {figure}
         </p>
       </div>
-      <div aria-hidden className="mt-4 h-64 sm:h-72 xl:h-auto xl:min-h-64 xl:flex-1">
+      {legend && (
+        <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-neutral-600">
+          {legend}
+        </div>
+      )}
+      <div
+        aria-hidden
+        className="mt-4 h-64 sm:h-72 xl:h-auto xl:min-h-64 xl:flex-1"
+      >
         {children}
       </div>
       <table className="sr-only">
@@ -73,6 +108,22 @@ export function ChartTooltip({
   );
 }
 
+/** One legend entry: colour swatch + label. */
+export function LegendItem({
+  swatch,
+  label,
+}: {
+  swatch: string;
+  label: string;
+}) {
+  return (
+    <span className="flex items-center gap-1.5">
+      <span className={cn("size-2.5 rounded-sm bg-gradient-to-b", swatch)} />
+      {label}
+    </span>
+  );
+}
+
 /** Recessive axis/grid styling shared by both charts. */
 export const axis = {
   stroke: "#e5e5e5",
@@ -80,4 +131,3 @@ export const axis = {
   tickLine: false,
   axisLine: false,
 } as const;
-export const CHART_GREEN = "#047857"; // emerald-700, the admin brand colour
