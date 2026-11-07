@@ -6,6 +6,7 @@ export const ROUTES = {
   book: "/book",
   myBookings: "/my-bookings",
   admin: ADMIN,
+  adminDashboard: `${ADMIN}/dashboard`,
   adminBookings: `${ADMIN}/bookings`,
   adminNewBooking: `${ADMIN}/bookings/new`,
   adminPayments: `${ADMIN}/payments`,

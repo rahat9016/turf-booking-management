@@ -12,6 +12,8 @@ import { creditOf, endMs, resetDemoData, useTurfDB } from "@/src/lib/store";
 import { cn } from "@/src/lib/utils";
 import { AdminSidebar } from "./AdminSidebar";
 import { AdminUserMenu } from "./AdminUserMenu";
+import { BookingAlertPopup } from "./BookingAlertPopup";
+import { NotificationBell } from "./NotificationBell";
 
 const topBtn =
   "size-10 shrink-0 items-center justify-center rounded-md border border-neutral-200 bg-white text-neutral-700";
@@ -80,7 +82,7 @@ export function AdminShell({ children }: { children: ReactNode }) {
       <aside
         className={cn(
           "fixed inset-y-0 left-0 z-30 hidden bg-gradient-to-b from-emerald-950 to-neutral-950 transition-[width] duration-200 lg:block print:hidden",
-          compact ? "w-20" : "w-64"
+          compact ? "w-20" : "w-72"
         )}
       >
         <AdminSidebar
@@ -97,7 +99,7 @@ export function AdminShell({ children }: { children: ReactNode }) {
             className="absolute inset-0 bg-black/50"
             onClick={close}
           />
-          <aside className="absolute inset-y-0 left-0 w-64 bg-gradient-to-b from-emerald-950 to-neutral-950">
+          <aside className="absolute inset-y-0 left-0 w-72 bg-gradient-to-b from-emerald-950 to-neutral-950">
             <button
               onClick={close}
               aria-label={t("Close menu")}
@@ -117,7 +119,7 @@ export function AdminShell({ children }: { children: ReactNode }) {
       <div
         className={cn(
           "min-w-0 transition-[padding] duration-200 print:pl-0",
-          compact ? "lg:pl-20" : "lg:pl-64"
+          compact ? "lg:pl-20" : "lg:pl-72"
         )}
       >
         <header className="sticky top-0 z-20 flex h-16 items-center gap-3 border-b border-neutral-200 bg-white/90 px-4 backdrop-blur sm:px-6 xl:px-8 print:hidden">
@@ -141,12 +143,14 @@ export function AdminShell({ children }: { children: ReactNode }) {
             )}
           </button>
           <div className="ml-auto flex items-center gap-2 sm:gap-3">
+            <NotificationBell />
             <LanguageSwitch />
             <AdminUserMenu venueName={db.settings.venueName} onReset={reset} />
           </div>
         </header>
         <div className="p-4 print:p-0">{hydrated ? children : <Loader />}</div>
       </div>
+      {hydrated && <BookingAlertPopup />}
     </div>
   );
 }

@@ -3,6 +3,7 @@
 import { taka } from "@/src/lib/format";
 import { useT } from "@/src/lib/i18n";
 import { cn } from "@/src/lib/utils";
+import type { IconType } from "@/src/types";
 import { type MoneyIcon, MoneyGlyph } from "./MoneyGlyph";
 
 const moneyTones = {
@@ -15,8 +16,12 @@ const moneyTones = {
 
 export type MoneyTone = keyof typeof moneyTones;
 
-/** Money tile: ৳ icon on an animated backdrop (hover), the amount and one line of context. */
-export function MoneyCard({
+function Icon({ icon: I }: { icon: IconType }) {
+  return <I className="size-5 sm:size-6" />;
+}
+
+/** Stat tile: ৳ icon on an animated backdrop (hover), the amount and one line of context. */
+export function StatCard({
   label,
   value,
   hint,
@@ -26,9 +31,11 @@ export function MoneyCard({
   className,
 }: {
   label: string;
-  value: number;
+  /** A number is shown as taka; pass a string for counts or percentages. */
+  value: number | string;
   hint?: string;
-  icon: MoneyIcon;
+  /** A ৳ line glyph, or any icon component. */
+  icon: MoneyIcon | IconType;
   tone: MoneyTone;
   index?: number;
   className?: string;
@@ -38,7 +45,7 @@ export function MoneyCard({
   return (
     <section
       className={cn(
-        "group relative flex min-w-0 flex-col overflow-hidden rounded-xl border border-neutral-200 bg-white p-3 transition hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-md sm:p-4",
+        "group relative flex min-h-32 min-w-0 flex-col overflow-hidden rounded-xl border border-neutral-200 bg-white p-3 transition hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-md sm:min-h-40 sm:p-5",
         className
       )}
     >
@@ -89,11 +96,20 @@ export function MoneyCard({
               className="tw-spin opacity-40"
             />
           </svg>
-          <MoneyGlyph icon={icon} className="relative size-5 sm:size-7" />
+          <span
+            className="tw-float relative"
+            style={{ animationDelay: `${index * 250}ms` }}
+          >
+            {typeof icon === "string" ? (
+              <MoneyGlyph icon={icon} className="size-5 sm:size-7" />
+            ) : (
+              <Icon icon={icon} />
+            )}
+          </span>
         </span>
       </div>
-      <p className="mt-auto pt-1.5 text-xl font-bold tabular-nums tracking-tight text-neutral-900 sm:pt-3 sm:text-2xl">
-        {taka(value)}
+      <p className="mt-auto pt-1.5 text-xl font-bold tabular-nums tracking-tight text-neutral-900 sm:pt-3 sm:text-3xl">
+        {typeof value === "number" ? taka(value) : value}
       </p>
       {hint && (
         <p className="mt-0.5 text-xs text-neutral-500 sm:text-[13px]">
@@ -103,3 +119,6 @@ export function MoneyCard({
     </section>
   );
 }
+
+/** Kept for the Payments page: a stat tile whose value is money. */
+export const MoneyCard = StatCard;

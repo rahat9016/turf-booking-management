@@ -508,4 +508,33 @@ export const bn: Record<string, string> = {
   hours: "ঘণ্টা",
   min: "মিনিট",
   "hrs before": "ঘণ্টা আগে",
+  // Dashboard
+  Dashboard: "ড্যাশবোর্ড",
+  "Net takings so far": "এ পর্যন্ত নিট আয়",
+  "Games today": "আজকের খেলা",
+  "{n} still to play": "{n}টি বাকি",
+  "Ground booked today": "আজ মাঠ বুকড",
+  "{a} of {b} hours": "{b} ঘণ্টার {a} ঘণ্টা",
+  Revenue: "আয়",
+  "Net takings, last {n} days": "নিট আয়, গত {n} দিন",
+  "Busy hours": "ব্যস্ত সময়",
+  "Hours booked by time of day, last {n} days":
+    "দিনের সময় অনুযায়ী বুকড ঘণ্টা, গত {n} দিন",
+  "Peak from {time}": "{time} থেকে পিক",
+  // Notifications
+  Notifications: "নোটিফিকেশন",
+  "Notifications ({n} unread)": "নোটিফিকেশন ({n}টি অপঠিত)",
+  "Mute sound": "শব্দ বন্ধ করুন",
+  "Turn sound on": "শব্দ চালু করুন",
+  "Mark all as read": "সব পঠিত করুন",
+  "Clear all": "সব মুছুন",
+  "Get alerts even when this tab is in the background.":
+    "ট্যাব ব্যাকগ্রাউন্ডে থাকলেও অ্যালার্ট পান।",
+  "Turn on": "চালু করুন",
+  "No notifications yet": "এখনো কোনো নোটিফিকেশন নেই",
+  "New online bookings will show up here.": "নতুন অনলাইন বুকিং এখানে দেখাবে।",
+  "just now": "এইমাত্র",
+  Dismiss: "বন্ধ করুন",
+  "View booking": "বুকিং দেখুন",
+  "+{n} more new bookings": "আরও {n}টি নতুন বুকিং",
 };

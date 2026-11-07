@@ -26,17 +26,17 @@ export function AdminSidebar({
     "rounded-md text-sm text-emerald-100/80 hover:bg-white/5 hover:text-white",
     rail
       ? "flex flex-col items-center gap-1 px-0.5 py-1.5 text-[10px]"
-      : "flex items-center gap-3 px-3 py-2"
+      : "flex h-11 items-center gap-3 px-4"
   );
 
   return (
     <nav className="flex h-full flex-col">
       <Link
-        href={ROUTES.adminBookings}
+        href={ROUTES.adminDashboard}
         onClick={onNavigate}
         className={cn(
           "block",
-          rail ? "px-2 pb-1 pt-5 text-center" : "px-5 pb-1 pt-5"
+          rail ? "px-2 pb-1 pt-5 text-center" : "px-6 pb-1 pt-6"
         )}
       >
         {rail ? (
@@ -50,7 +50,7 @@ export function AdminSidebar({
       <div
         className={cn(
           "mt-5 flex-1 overflow-y-auto pb-4",
-          rail ? "space-y-2 px-1.5" : "space-y-5 px-3"
+          rail ? "space-y-2 px-1.5" : "space-y-6 px-4"
         )}
       >
         {ADMIN_NAV.map((g, gi) => (
@@ -59,7 +59,7 @@ export function AdminSidebar({
             className={cn(rail && gi > 0 && "border-t border-white/10 pt-2")}
           >
             {!rail && (
-              <p className="px-3 pb-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-emerald-200/40">
+              <p className="px-4 pb-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-emerald-200/40">
                 {t(g.title)}
               </p>
             )}
@@ -80,7 +80,7 @@ export function AdminSidebar({
       <div
         className={cn(
           "space-y-0.5 border-t border-white/10",
-          rail ? "p-1.5" : "p-3"
+          rail ? "p-1.5" : "p-4"
         )}
       >
         <Link
@@ -136,7 +136,7 @@ function SidebarLink({
           "rounded-md text-sm transition",
           rail
             ? "flex h-15 flex-col items-center justify-center gap-1 px-0.5 text-center"
-            : "flex items-center gap-3 px-3 py-2.5",
+            : "flex h-12 items-center gap-3 rounded-lg px-4 text-[15px]",
           active
             ? "bg-white font-semibold text-emerald-950 shadow-sm"
             : "text-emerald-100/80 hover:bg-white/5 hover:text-white"
@@ -145,7 +145,7 @@ function SidebarLink({
         <span className="relative">
           <item.icon
             className={cn(
-              rail ? "size-5" : "size-4",
+              rail ? "size-5" : "size-[18px]",
               active && "text-emerald-700"
             )}
           />

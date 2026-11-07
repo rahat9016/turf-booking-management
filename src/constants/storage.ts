@@ -10,6 +10,10 @@ export const STORAGE_KEYS = {
   lang: "turf-lang",
   /** Admin sidebar collapsed to an icon rail. */
   adminSidebarCompact: "turf-admin-sidebar-compact",
+  /** Front-desk notification list (this browser only). */
+  adminNotifications: "turf-admin-notifications",
+  /** "0" when the notification chime is muted. */
+  adminSound: "turf-admin-sound",
 } as const;
 
 /** Window event fired when the language changes in this tab. */

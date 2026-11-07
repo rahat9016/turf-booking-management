@@ -38,3 +38,12 @@ export const formatDuration = (ms: number) => {
   if (m >= 10) return `${m}m`;
   return `${m}:${pad(s)}`;
 };
+
+/** "just now", "5m", "3h", "2d" — how long ago `iso` was, from `now` (ms). */
+export const timeAgo = (iso: string, now: number) => {
+  const s = Math.max(0, Math.round((now - new Date(iso).getTime()) / 1000));
+  if (s < 45) return "just now";
+  if (s < 3600) return `${Math.round(s / 60)}m`;
+  if (s < 86_400) return `${Math.round(s / 3600)}h`;
+  return `${Math.round(s / 86_400)}d`;
+};

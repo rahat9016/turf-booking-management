@@ -494,3 +494,78 @@ section[id] {
 *::-webkit-scrollbar-thumb:hover {
   background: rgb(115 115 115);
 }
+
+/* Admin stat tiles: soft ripples behind the ৳ icon and a slowly turning dashed ring. */
+@keyframes tw-ripple {
+  0% {
+    transform: scale(0.55);
+    opacity: 0.35;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes tw-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes tw-glyph-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+.tw-ripple {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: tw-ripple 2.8s ease-out infinite;
+}
+
+.tw-spin {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: tw-spin 14s linear infinite;
+}
+
+.tw-float {
+  animation: tw-glyph-float 3s ease-in-out infinite;
+}
+
+/* Header bell wiggles when unread notifications arrive. */
+@keyframes bell-ring {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  15% {
+    transform: rotate(14deg);
+  }
+  30% {
+    transform: rotate(-12deg);
+  }
+  45% {
+    transform: rotate(8deg);
+  }
+  60% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tw-ripple,
+  .tw-spin,
+  .tw-float {
+    animation: none;
+  }
+}

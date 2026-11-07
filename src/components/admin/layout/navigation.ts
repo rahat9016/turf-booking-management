@@ -1,5 +1,6 @@
 import {
   ClipboardList,
+  LayoutDashboard,
   Image as ImageIcon,
   LayoutTemplate,
   Settings,
@@ -21,6 +22,11 @@ export const ADMIN_NAV: { title: string; items: NavItem[] }[] = [
   {
     title: "Front desk",
     items: [
+      {
+        href: ROUTES.adminDashboard,
+        label: "Dashboard",
+        icon: LayoutDashboard,
+      },
       {
         href: ROUTES.adminBookings,
         label: "Bookings",
