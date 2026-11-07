@@ -17,8 +17,6 @@ import { LookupForm } from "./LookupForm";
 import { type LookupMode, parseQuery, type Query } from "./parseQuery";
 import { Reveal } from "./Reveal";
 
-type ListTab = "upcoming" | "past";
-
 export function MyBookings() {
   const db = useTurfDB();
   const tr = useT();
@@ -40,7 +38,6 @@ export function MyBookings() {
   const [mode, setMode] = useState<LookupMode>(() =>
     !getSavedPhone() && freshCode ? "code" : "phone"
   );
-  const [tab, setTab] = useState<ListTab>("upcoming");
   // After a search, results appear under the form on the same page; scroll them into view.
   const scrollToResults = useRef(false);
   useEffect(() => {
@@ -66,7 +63,6 @@ export function MyBookings() {
     setError("");
     scrollToResults.current = true;
     setQuery(q);
-    setTab("upcoming");
     if (q?.kind === "phone") savePhone(q.value);
   };
 
@@ -94,22 +90,10 @@ export function MyBookings() {
   const upcoming = mine
     .filter(isUpcoming)
     .sort((a, b) => startMs(a) - startMs(b));
-  const past = mine
-    .filter((b) => !isUpcoming(b))
-    .sort((a, b) => startMs(b) - startMs(a));
+  // Played and cancelled games aren't listed — a code lookup still shows that one booking.
   const featured = query?.kind === "code" ? mine[0] : upcoming[0];
-  // Only tabs with bookings in them; the whole list disappears when there's nothing beyond the featured ticket.
-  const groups = (
-    [
-      {
-        k: "upcoming",
-        label: tr("More upcoming"),
-        items: upcoming.slice(query?.kind === "phone" ? 1 : 0),
-      },
-      { k: "past", label: tr("Past"), items: past },
-    ] as const
-  ).filter((g) => g.items.length > 0);
-  const shown = groups.find((g) => g.k === tab) ?? groups[0];
+  const more = query?.kind === "phone" ? upcoming.slice(1) : [];
+  const empty = query?.kind === "phone" ? !upcoming.length : !mine.length;
 
   return (
     <div className="bg-neutral-50">
@@ -148,11 +132,11 @@ export function MyBookings() {
           id="mb-results"
           className="mx-auto min-h-[40vh] max-w-7xl scroll-mt-24 px-4 pb-20 pt-10 md:px-8"
         >
-          {!mine.length && (
+          {empty && (
             <Reveal className="mt-12 text-center">
               <p className="text-lg font-medium text-neutral-900">
                 {query.kind === "phone"
-                  ? tr("No bookings on this number yet.")
+                  ? tr("No upcoming bookings on this number.")
                   : tr("No booking found with code {code}.", {
                       code: query.value,
                     })}
@@ -176,28 +160,13 @@ export function MyBookings() {
             </Reveal>
           )}
 
-          {query.kind === "phone" && shown && (
+          {more.length > 0 && (
             <Reveal delay={0.25} className="mt-12">
-              <div className="flex gap-6 border-b border-neutral-200 text-sm">
-                {groups.map((g) => (
-                  <button
-                    key={g.k}
-                    onClick={() => setTab(g.k)}
-                    aria-pressed={shown.k === g.k}
-                    className={cn(
-                      "-mb-px border-b-2 pb-3",
-                      shown.k === g.k
-                        ? "border-emerald-800 font-semibold text-neutral-900"
-                        : "border-transparent text-neutral-500 hover:text-neutral-900"
-                    )}
-                  >
-                    {g.label} ({g.items.length})
-                  </button>
-                ))}
-              </div>
-              {/* Keyed by tab so switching tabs replays the row stagger. */}
-              <ul key={shown.k} className="divide-y divide-neutral-200">
-                {shown.items.map((b, i) => (
+              <p className="border-b border-neutral-200 pb-3 text-sm font-semibold text-neutral-900">
+                {tr("More upcoming")} ({more.length})
+              </p>
+              <ul className="divide-y divide-neutral-200">
+                {more.map((b, i) => (
                   <BookingRow key={b.id} b={b} index={i} />
                 ))}
               </ul>

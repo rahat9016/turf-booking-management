@@ -1,4 +1,8 @@
-import { SiteFooter, SiteHeader } from "@/src/components/layout";
+import {
+  MobileBottomNav,
+  SiteFooter,
+  SiteHeader,
+} from "@/src/components/layout";
 
 export default function SiteLayout({
   children,
@@ -6,10 +10,12 @@ export default function SiteLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="relative">
+    // Phones: room at the bottom so the tab bar never covers the footer.
+    <div className="relative pb-[calc(4.5rem+env(safe-area-inset-bottom))] lg:pb-0">
       <SiteHeader />
       {children}
       <SiteFooter />
+      <MobileBottomNav />
     </div>
   );
 }

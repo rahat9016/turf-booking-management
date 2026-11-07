@@ -156,15 +156,15 @@ export function SlotBooking() {
   return (
     <div className="bg-[#f7f6f1]">
       <div className="mx-auto max-w-7xl px-4 pb-16 pt-6 md:px-8 md:pt-10">
-        {/* The payment step opens straight on the form; its heading stays for screen readers. */}
+        {/* Phones and the payment step open straight on the picker/form; the heading stays for screen readers. */}
         {/* Not cn(): tailwind-merge reads text-fluid-6xl as a colour and drops it next to text-neutral-900. */}
         <h1
-          className={`text-fluid-6xl font-semibold tracking-tight text-neutral-900 ${paying ? "sr-only" : ""}`}
+          className={`text-fluid-6xl font-semibold tracking-tight text-neutral-900 ${paying ? "sr-only" : "max-md:sr-only"}`}
         >
           {paying ? tr("Complete your booking") : tr("Book the ground")}
         </h1>
         {!paying && (
-          <p className="mt-3 text-base text-neutral-500 md:text-lg">
+          <p className="mt-3 text-base text-neutral-500 max-md:hidden md:text-lg">
             {tr("Pick your day. Choose your time. Get playing.")}
           </p>
         )}
@@ -191,7 +191,7 @@ export function SlotBooking() {
             />
           </div>
         ) : (
-          <div className="mt-6 grid gap-6 md:mt-8 lg:grid-cols-[1fr_440px] lg:items-start">
+          <div className="grid gap-6 md:mt-8 lg:grid-cols-[1fr_440px] lg:items-start">
             {/* Steps */}
             <div className="rounded-lg bg-white p-4 shadow-sm ring-1 ring-black/[0.04] sm:p-5 md:p-6">
               {multiCourt && (

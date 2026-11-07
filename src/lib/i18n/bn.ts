@@ -537,4 +537,8 @@ export const bn: Record<string, string> = {
   Dismiss: "বন্ধ করুন",
   "View booking": "বুকিং দেখুন",
   "+{n} more new bookings": "আরও {n}টি নতুন বুকিং",
+  // Mobile tab bar
+  Main: "প্রধান মেনু",
+  Call: "কল",
+  "No upcoming bookings on this number.": "এই নম্বরে কোনো আসন্ন বুকিং নেই।",
 };

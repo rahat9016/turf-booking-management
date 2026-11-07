@@ -18,7 +18,7 @@ export function MobileProceedBar({
 }) {
   const tr = useT();
   return (
-    <div className="fixed inset-x-3 bottom-3 z-30 flex items-center justify-between gap-3 rounded-lg bg-emerald-950 p-3 pl-4 text-white shadow-xl lg:hidden">
+    <div className="fixed inset-x-3 bottom-[calc(5.25rem+env(safe-area-inset-bottom))] z-30 flex items-center justify-between gap-3 rounded-lg bg-emerald-950 p-3 pl-4 text-white shadow-xl lg:hidden">
       <div className="min-w-0 text-sm">
         <p className="truncate font-semibold">
           {clock(startHour)} – {clock(startHour + duration)}
