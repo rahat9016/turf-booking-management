@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
+import { ROUTES } from "@/src/constants";
 
-export default function TurfAdminPage() {
-  redirect("/admin/bookings");
+export default function AdminPage() {
+  redirect(ROUTES.adminBookings);
 }

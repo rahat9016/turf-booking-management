@@ -1,5 +1,5 @@
-import GalleryManager from "@/src/components/turf/admin/GalleryManager";
+import { GalleryManager } from "@/src/components/admin/gallery/GalleryManager";
 
-export default function TurfGalleryPage() {
+export default function AdminGalleryPage() {
   return <GalleryManager />;
 }

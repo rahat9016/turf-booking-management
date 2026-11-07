@@ -1,7 +1,11 @@
-import TurfAdminShell from "@/src/components/turf/admin/TurfAdminShell";
+import { AdminShell } from "@/src/components/admin/layout/AdminShell";
 
 export const metadata = { title: "Admin | TurfHub" };
 
-export default function TurfAdminLayout({ children }: { children: React.ReactNode }) {
-  return <TurfAdminShell>{children}</TurfAdminShell>;
+export default function AdminLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <AdminShell>{children}</AdminShell>;
 }

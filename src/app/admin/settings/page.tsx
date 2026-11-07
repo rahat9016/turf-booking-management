@@ -1,5 +1,5 @@
-import SettingsForm from "@/src/components/turf/admin/SettingsForm";
+import { SettingsForm } from "@/src/components/admin/settings/SettingsForm";
 
-export default function TurfSettingsPage() {
+export default function AdminSettingsPage() {
   return <SettingsForm />;
 }

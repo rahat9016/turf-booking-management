@@ -1,5 +1,5 @@
-import ContentManager from "@/src/components/turf/admin/ContentManager";
+import { ContentManager } from "@/src/components/admin/content/ContentManager";
 
-export default function TurfContentPage() {
+export default function AdminContentPage() {
   return <ContentManager />;
 }

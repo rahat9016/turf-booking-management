@@ -1,5 +1,5 @@
-import NewBooking from "@/src/components/turf/admin/NewBooking";
+import { NewBooking } from "@/src/components/admin/new-booking/NewBooking";
 
-export default function TurfNewBookingPage() {
+export default function AdminNewBookingPage() {
   return <NewBooking />;
 }

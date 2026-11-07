@@ -67,7 +67,8 @@ export const bn: Record<string, string> = {
   "Toggle menu": "মেনু",
   "Admin panel": "অ্যাডমিন প্যানেল",
   "TurfHub home": "TurfHub হোম",
-  "One football turf in Bashundhara. Check what's free, pay a small advance, and play.": "বসুন্ধরায় আমাদের ফুটবল টার্ফ। খালি সময় দেখুন, অল্প অগ্রিম দিন, তারপর মাঠে নেমে পড়ুন।",
+  "One football turf in Bashundhara. Check what's free, pay a small advance, and play.":
+    "বসুন্ধরায় আমাদের ফুটবল টার্ফ। খালি সময় দেখুন, অল্প অগ্রিম দিন, তারপর মাঠে নেমে পড়ুন।",
   "Book a slot": "স্লট বুক করুন",
   "Call us": "কল করুন",
   Footer: "ফুটার",
@@ -78,11 +79,13 @@ export const bn: Record<string, string> = {
   "Open now · closes {time}": "এখন খোলা · {time}-এ বন্ধ হবে",
   "Closed · opens {time}": "এখন বন্ধ · {time}-এ খুলবে",
   "Floodlit after dark.": "রাতেও ফ্লাডলাইটে খেলা যায়।",
-  "Demo — data is stored in your browser.": "ডেমো — সব তথ্য আপনার ব্রাউজারেই থাকে।",
+  "Demo — data is stored in your browser.":
+    "ডেমো — সব তথ্য আপনার ব্রাউজারেই থাকে।",
   Live: "লাইভ",
 
   /* ── Home page ── */
-  "Book Our Football Turf\nin Under a Minute.": "এক মিনিটেই বুক করুন\nআমাদের ফুটবল টার্ফ।",
+  "Book Our Football Turf\nin Under a Minute.":
+    "এক মিনিটেই বুক করুন\nআমাদের ফুটবল টার্ফ।",
   "Pick a date and time, see instantly if the ground is free, and lock it with a small advance. No phone calls, no double bookings — just show up and play.":
     "তারিখ আর সময় বাছুন, মাঠ খালি কি না সাথে সাথেই দেখে নিন, আর অল্প অগ্রিম দিয়ে স্লটটা নিজের করে নিন। ফোন করার ঝামেলা নেই, ডাবল বুকিংয়ের ভয় নেই — শুধু চলে আসুন, খেলুন।",
   "See live slots": "খালি সময় দেখুন",
@@ -90,7 +93,8 @@ export const bn: Record<string, string> = {
   "{format} ground": "{format} মাঠ",
   "Football ground": "ফুটবল মাঠ",
   "Open every day": "প্রতিদিন খোলা",
-  "bKash, Nagad or card — rest at the venue": "bKash, Nagad বা কার্ডে — বাকিটা মাঠে এসে",
+  "bKash, Nagad or card — rest at the venue":
+    "bKash, Nagad বা কার্ডে — বাকিটা মাঠে এসে",
   "Free cancellation": "বিনা খরচে বাতিল",
   "Up to {n} hours before kick-off": "খেলার {n} ঘণ্টা আগে পর্যন্ত",
   Surface: "মাঠের ধরন",
@@ -106,17 +110,22 @@ export const bn: Record<string, string> = {
   "Pitch plan": "মাঠের নকশা",
   ft: "ফুট",
   "Life on the pitch": "মাঠের কিছু মুহূর্ত",
-  "Built for the people\nwho actually play.": "খেলোয়াড়দের জন্য,\nখেলোয়াড়দের হাতে গড়া।",
+  "Built for the people\nwho actually play.":
+    "খেলোয়াড়দের জন্য,\nখেলোয়াড়দের হাতে গড়া।",
   "One well-kept pitch in Bashundhara, run by people who play on it. Book online in a minute, turn up, and the ground is ready — lines marked, lights on, bibs waiting.":
     "বসুন্ধরায় যত্নে রাখা একটি মাঠ, চালান এমন মানুষেরা যারা নিজেরাও এখানে খেলেন। এক মিনিটে অনলাইনে বুক করুন, চলে আসুন — লাইন টানা, আলো জ্বলছে, বিবও তৈরি।",
   "Weekend squads": "উইকেন্ড দল",
-  "Same group, same slot every week — book your regular time well ahead and pay the advance in seconds.": "প্রতি সপ্তাহে একই দল, একই সময়? নিয়মিত সময়টা আগেভাগেই বুক করে রাখুন, অগ্রিম দিতে লাগবে কয়েক সেকেন্ড।",
+  "Same group, same slot every week — book your regular time well ahead and pay the advance in seconds.":
+    "প্রতি সপ্তাহে একই দল, একই সময়? নিয়মিত সময়টা আগেভাগেই বুক করে রাখুন, অগ্রিম দিতে লাগবে কয়েক সেকেন্ড।",
   "Office teams": "অফিসের দল",
-  "After-work matches and corporate leagues. Need the whole evening? We block the ground for you.": "অফিসের পরের ম্যাচ বা কর্পোরেট লিগ। পুরো সন্ধ্যা লাগবে? আমরা মাঠটা আপনাদের জন্য রেখে দেব।",
+  "After-work matches and corporate leagues. Need the whole evening? We block the ground for you.":
+    "অফিসের পরের ম্যাচ বা কর্পোরেট লিগ। পুরো সন্ধ্যা লাগবে? আমরা মাঠটা আপনাদের জন্য রেখে দেব।",
   "Kids & coaching": "শিশু ও কোচিং",
-  "Morning sessions on a soft, shock-padded surface, with a coach on request.": "নরম, শক-প্যাডেড মাঠে সকালের সেশন — চাইলে কোচও থাকবেন।",
+  "Morning sessions on a soft, shock-padded surface, with a coach on request.":
+    "নরম, শক-প্যাডেড মাঠে সকালের সেশন — চাইলে কোচও থাকবেন।",
   "By day": "দিনে",
-  "FIFA-grade grass with a true roll.": "ফিফা-মানের ঘাস, বল গড়ায় একদম ঠিকঠাক।",
+  "FIFA-grade grass with a true roll.":
+    "ফিফা-মানের ঘাস, বল গড়ায় একদম ঠিকঠাক।",
   "After dark": "রাতে",
   "floodlit until {time}.": "ফ্লাডলাইট জ্বলে {time} পর্যন্ত।",
   "Player striking the ball on the turf": "টার্ফে বলে কিক করছেন একজন খেলোয়াড়",
@@ -132,34 +141,45 @@ export const bn: Record<string, string> = {
   "Book ahead": "আগেভাগে বুক করা যায়",
   "Lock your regular slot early": "নিয়মিত সময়টা আগেই নিশ্চিত করুন",
   "More than an hour\non the pitch.": "শুধু ম্যাচ নয়,\nআরও অনেক কিছু।",
-  "Book a kickabout online in a minute. For coaching, events or a tournament, give us a call and we'll set it up.": "সাধারণ খেলা এক মিনিটে অনলাইনেই বুক করুন। কোচিং, ইভেন্ট বা টুর্নামেন্ট চাইলে একটা কল দিন, আমরা সব ব্যবস্থা করে দেব।",
+  "Book a kickabout online in a minute. For coaching, events or a tournament, give us a call and we'll set it up.":
+    "সাধারণ খেলা এক মিনিটে অনলাইনেই বুক করুন। কোচিং, ইভেন্ট বা টুর্নামেন্ট চাইলে একটা কল দিন, আমরা সব ব্যবস্থা করে দেব।",
   "From {amount}/hr": "ঘণ্টা {amount} থেকে শুরু",
   "Book online": "অনলাইনে বুক করুন",
   Book: "বুক করুন",
   "Call to arrange": "কল করে ঠিক করুন",
   "Hourly hire": "ঘণ্টাভিত্তিক ভাড়া",
-  "Your squad, the whole pitch, by the hour. Pick a free time and lock it with a small advance.": "আপনার দল, পুরো মাঠ, ঘণ্টা হিসেবে। খালি সময় বেছে অল্প অগ্রিম দিয়ে নিশ্চিত করুন।",
+  "Your squad, the whole pitch, by the hour. Pick a free time and lock it with a small advance.":
+    "আপনার দল, পুরো মাঠ, ঘণ্টা হিসেবে। খালি সময় বেছে অল্প অগ্রিম দিয়ে নিশ্চিত করুন।",
   Coaching: "কোচিং",
-  "Sessions for kids and adults — fitness, passing, finishing and goalkeeping.": "শিশু ও বড়দের সেশন — ফিটনেস, পাসিং, ফিনিশিং আর গোলকিপিং।",
+  "Sessions for kids and adults — fitness, passing, finishing and goalkeeping.":
+    "শিশু ও বড়দের সেশন — ফিটনেস, পাসিং, ফিনিশিং আর গোলকিপিং।",
   "Coach on request": "অনুরোধে কোচ",
   "Private events": "প্রাইভেট ইভেন্ট",
-  "Office matches and birthday games. We block the ground and have it ready when you arrive.": "অফিসের ম্যাচ বা জন্মদিনের খেলা — আমরা মাঠ রেখে দিই, আপনি এলেই সব তৈরি।",
+  "Office matches and birthday games. We block the ground and have it ready when you arrive.":
+    "অফিসের ম্যাচ বা জন্মদিনের খেলা — আমরা মাঠ রেখে দিই, আপনি এলেই সব তৈরি।",
   "Evening or full day": "সন্ধ্যা বা পুরো দিন",
   Tournaments: "টুর্নামেন্ট",
-  "7-a-side cups with fixtures drawn up and the ground held for every round.": "৭-এ-সাইড কাপ — ফিক্সচার আমরাই বানাই, প্রতিটি রাউন্ডের জন্য মাঠ রাখা থাকে।",
+  "7-a-side cups with fixtures drawn up and the ground held for every round.":
+    "৭-এ-সাইড কাপ — ফিক্সচার আমরাই বানাই, প্রতিটি রাউন্ডের জন্য মাঠ রাখা থাকে।",
   "Ask about dates": "তারিখ জানতে কল করুন",
   "How to book your turf": "কীভাবে টার্ফ বুক করবেন",
   "Start booking": "বুকিং শুরু করুন",
   "Pick date & time": "তারিখ আর সময় বাছুন",
-  "Open Live Slots and choose a day. You see right away which start times are free and which are taken.": "খালি সময়ের পাতায় গিয়ে দিন বাছুন। কোন সময় খালি আর কোনটা বুকড, সাথে সাথেই দেখতে পাবেন।",
+  "Open Live Slots and choose a day. You see right away which start times are free and which are taken.":
+    "খালি সময়ের পাতায় গিয়ে দিন বাছুন। কোন সময় খালি আর কোনটা বুকড, সাথে সাথেই দেখতে পাবেন।",
   "Slot held for {n} min": "{n} মিনিট স্লট আপনার",
-  "Enter your name and mobile number. While you pay, the slot is locked for you — nobody else can grab it.": "নাম আর মোবাইল নম্বর দিন। পেমেন্ট করার সময়টুকু স্লটটা আপনার জন্য আটকে থাকবে — অন্য কেউ নিতে পারবে না।",
+  "Enter your name and mobile number. While you pay, the slot is locked for you — nobody else can grab it.":
+    "নাম আর মোবাইল নম্বর দিন। পেমেন্ট করার সময়টুকু স্লটটা আপনার জন্য আটকে থাকবে — অন্য কেউ নিতে পারবে না।",
   "Pay {n}% advance": "{n}% অগ্রিম দিন",
-  "Pay the advance with bKash, Nagad or card. The rest is paid in cash or bKash at the venue.": "bKash, Nagad বা কার্ডে অগ্রিম দিন। বাকি টাকা মাঠে এসে ক্যাশ বা bKash-এ দেবেন।",
+  "Pay the advance with bKash, Nagad or card. The rest is paid in cash or bKash at the venue.":
+    "bKash, Nagad বা কার্ডে অগ্রিম দিন। বাকি টাকা মাঠে এসে ক্যাশ বা bKash-এ দেবেন।",
   "Get confirmed & play": "বুকিং নিশ্চিত, এবার খেলুন",
-  "Your booking is confirmed the moment you pay. Find it any time under My Bookings with your phone number.": "টাকা দেওয়ার সাথে সাথেই বুকিং নিশ্চিত। ফোন নম্বর দিয়ে যেকোনো সময় 'আমার বুকিং' পাতায় দেখে নিতে পারবেন।",
-  "Tonight's prime slots go fast.": "রাতের ভালো সময়গুলো তাড়াতাড়ি শেষ হয়ে যায়।",
-  "Peak hours start at {time}. Check what's left before your squad does.": "{time} থেকে পিক আওয়ার শুরু। দলের অন্যদের আগে আপনিই দেখে নিন কোন সময় এখনো খালি।",
+  "Your booking is confirmed the moment you pay. Find it any time under My Bookings with your phone number.":
+    "টাকা দেওয়ার সাথে সাথেই বুকিং নিশ্চিত। ফোন নম্বর দিয়ে যেকোনো সময় 'আমার বুকিং' পাতায় দেখে নিতে পারবেন।",
+  "Tonight's prime slots go fast.":
+    "রাতের ভালো সময়গুলো তাড়াতাড়ি শেষ হয়ে যায়।",
+  "Peak hours start at {time}. Check what's left before your squad does.":
+    "{time} থেকে পিক আওয়ার শুরু। দলের অন্যদের আগে আপনিই দেখে নিন কোন সময় এখনো খালি।",
   "Check live slots": "খালি সময় দেখুন",
 
   /* ── Seeded ground & gallery (until staff change them) ── */
@@ -172,7 +192,8 @@ export const bn: Record<string, string> = {
   "Free bibs": "ফ্রি বিব",
   "Drinking water": "খাবার পানি",
   Parking: "পার্কিং",
-  "Our 7-a-side pitch with shock-pad grass, full-height nets and floodlights for night matches.": "আমাদের ৭-এ-সাইড মাঠ — শক-প্যাড ঘাস, পূর্ণ উচ্চতার নেট আর রাতের খেলার জন্য ফ্লাডলাইট।",
+  "Our 7-a-side pitch with shock-pad grass, full-height nets and floodlights for night matches.":
+    "আমাদের ৭-এ-সাইড মাঠ — শক-প্যাড ঘাস, পূর্ণ উচ্চতার নেট আর রাতের খেলার জন্য ফ্লাডলাইট।",
   "The pitch at golden hour": "সোনালি বিকেলে মাঠ",
   "Floodlit night match": "ফ্লাডলাইটে রাতের ম্যাচ",
   "Kick-off": "কিক-অফ",
@@ -195,13 +216,15 @@ export const bn: Record<string, string> = {
   "Peak rate from {time}": "{time} থেকে পিক রেট",
   "Only {n} hr free from {time}.": "{time} থেকে মাত্র {n} ঘণ্টা খালি।",
   "{time} is already taken.": "{time}-এর সময়টা আগেই বুক হয়ে গেছে।",
-  "{total} total · {advance} advance to lock it": "মোট {total} · {advance} অগ্রিম দিলেই সময়টা আপনার",
+  "{total} total · {advance} advance to lock it":
+    "মোট {total} · {advance} অগ্রিম দিলেই সময়টা আপনার",
   "Book {n} hr": "{n} ঘণ্টা বুক করুন",
   "Try {time}": "{time} দেখুন",
   "Book {time}": "{time} বুক করুন",
   "Book the ground": "মাঠ বুক করুন",
   "Complete your booking": "বুকিং শেষ করুন",
-  "Pick your day. Choose your time. Get playing.": "দিন ঠিক করুন, সময় বাছুন, মাঠে নেমে পড়ুন।",
+  "Pick your day. Choose your time. Get playing.":
+    "দিন ঠিক করুন, সময় বাছুন, মাঠে নেমে পড়ুন।",
   "Choose a day": "কবে খেলবেন?",
   "Open calendar": "ক্যালেন্ডার খুলুন",
   "Previous week": "আগের সপ্তাহ",
@@ -215,14 +238,17 @@ export const bn: Record<string, string> = {
   "Hourly rate (from {time})": "ঘণ্টাপ্রতি ভাড়া ({time} থেকে)",
   "Hourly rate (mixed)": "ঘণ্টাপ্রতি ভাড়া (দুই রেট মিলিয়ে)",
   "Pay now ({n}%)": "এখন দেবেন ({n}%)",
-  "That time was just taken. Pick another kick-off.": "এইমাত্র অন্য কেউ এই সময়টা নিয়ে নিয়েছে। আরেকটা সময় বাছুন।",
+  "That time was just taken. Pick another kick-off.":
+    "এইমাত্র অন্য কেউ এই সময়টা নিয়ে নিয়েছে। আরেকটা সময় বাছুন।",
   "Continue to payment": "পেমেন্টে এগিয়ে যান",
-  "Slot held for {n} minutes once you continue.": "এগোলেই {n} মিনিট স্লটটা আপনার জন্য আটকে রাখা হবে।",
+  "Slot held for {n} minutes once you continue.":
+    "এগোলেই {n} মিনিট স্লটটা আপনার জন্য আটকে রাখা হবে।",
   "{amount} to pay now": "এখন দিতে হবে {amount}",
   Continue: "এগিয়ে যান",
   "Your match": "আপনার ম্যাচ",
   "Entire ground": "পুরো মাঠ",
-  "Your slot hold expired. Pick the slot again to continue.": "স্লট আটকে রাখার সময় শেষ হয়ে গেছে। আবার সময় বেছে নিন।",
+  "Your slot hold expired. Pick the slot again to continue.":
+    "স্লট আটকে রাখার সময় শেষ হয়ে গেছে। আবার সময় বেছে নিন।",
   "Change slot": "সময় বদলান",
   "Slot held for": "স্লটটা আপনার জন্য আটকে আছে",
   "Your details": "আপনার তথ্য",
@@ -239,21 +265,29 @@ export const bn: Record<string, string> = {
 
   /* ── My Bookings ── */
   "Find your booking": "আপনার বুকিং দেখুন",
-  "Your mobile number shows every booking you've made. A booking code shows just that one.": "মোবাইল নম্বর দিলে আপনার সব বুকিং দেখাবে, আর বুকিং কোড দিলে শুধু সেই বুকিংটা।",
+  "Your mobile number shows every booking you've made. A booking code shows just that one.":
+    "মোবাইল নম্বর দিলে আপনার সব বুকিং দেখাবে, আর বুকিং কোড দিলে শুধু সেই বুকিংটা।",
   "Look up by": "কী দিয়ে খুঁজবেন",
   "Booking code": "বুকিং কোড",
   Find: "খুঁজুন",
-  "The number you entered when you booked.": "বুক করার সময় যে নম্বরটা দিয়েছিলেন।",
-  "Shown after you paid the advance — looks like TH-1042.": "অগ্রিম দেওয়ার পর যে কোড পেয়েছিলেন — যেমন TH-1042।",
+  "The number you entered when you booked.":
+    "বুক করার সময় যে নম্বরটা দিয়েছিলেন।",
+  "Shown after you paid the advance — looks like TH-1042.":
+    "অগ্রিম দেওয়ার পর যে কোড পেয়েছিলেন — যেমন TH-1042।",
   "Enter your mobile number or booking code.": "মোবাইল নম্বর বা বুকিং কোড দিন।",
-  "That mobile number doesn't look right — use 11 digits, e.g. 01712345678.": "মোবাইল নম্বরটি ঠিক মনে হচ্ছে না — ১১ সংখ্যা দিন, যেমন 01712345678।",
-  "Enter an 11-digit mobile number (01XXXXXXXXX) or a booking code like TH-1042.": "১১ সংখ্যার মোবাইল নম্বর (01XXXXXXXXX) বা TH-1042-এর মতো বুকিং কোড দিন।",
-  "Enter the 11-digit mobile number you booked with, e.g. 01712345678.": "যে ১১ সংখ্যার নম্বর দিয়ে বুক করেছিলেন সেটি দিন, যেমন 01712345678।",
+  "That mobile number doesn't look right — use 11 digits, e.g. 01712345678.":
+    "মোবাইল নম্বরটি ঠিক মনে হচ্ছে না — ১১ সংখ্যা দিন, যেমন 01712345678।",
+  "Enter an 11-digit mobile number (01XXXXXXXXX) or a booking code like TH-1042.":
+    "১১ সংখ্যার মোবাইল নম্বর (01XXXXXXXXX) বা TH-1042-এর মতো বুকিং কোড দিন।",
+  "Enter the 11-digit mobile number you booked with, e.g. 01712345678.":
+    "যে ১১ সংখ্যার নম্বর দিয়ে বুক করেছিলেন সেটি দিন, যেমন 01712345678।",
   "Enter a booking code like TH-1042.": "TH-1042-এর মতো একটি বুকিং কোড দিন।",
   "No bookings on this number yet.": "এই নম্বরে এখনো কোনো বুকিং নেই।",
   "No booking found with code {code}.": "{code} কোডে কোনো বুকিং পাওয়া যায়নি।",
-  "Booked with a different number? Change it above.": "অন্য নম্বর দিয়ে বুক করেছিলেন? ওপরে নম্বরটা বদলে দিন।",
-  "Check the code, or look up with your mobile number instead.": "কোডটা আবার দেখুন, নয়তো মোবাইল নম্বর দিয়ে খুঁজুন।",
+  "Booked with a different number? Change it above.":
+    "অন্য নম্বর দিয়ে বুক করেছিলেন? ওপরে নম্বরটা বদলে দিন।",
+  "Check the code, or look up with your mobile number instead.":
+    "কোডটা আবার দেখুন, নয়তো মোবাইল নম্বর দিয়ে খুঁজুন।",
   "More upcoming": "সামনের আরও বুকিং",
   "Kick-off in {time}": "খেলা শুরু হতে আর {time}",
   "Kick-off {time}": "খেলা শুরু {time}-এ",
@@ -270,7 +304,8 @@ export const bn: Record<string, string> = {
   "Front Desk": "ফ্রন্ট ডেস্ক",
   "View booking site": "বুকিং সাইট দেখুন",
   Site: "সাইট",
-  "Reset all demo data (bookings, payments, content, gallery, settings) to the original sample?": "সব ডেমো ডেটা (বুকিং, পেমেন্ট, কনটেন্ট, গ্যালারি, সেটিংস) শুরুর অবস্থায় ফিরিয়ে নেবেন?",
+  "Reset all demo data (bookings, payments, content, gallery, settings) to the original sample?":
+    "সব ডেমো ডেটা (বুকিং, পেমেন্ট, কনটেন্ট, গ্যালারি, সেটিংস) শুরুর অবস্থায় ফিরিয়ে নেবেন?",
   "New booking {code}": "নতুন বুকিং {code}",
 
   /* ── Admin bookings ── */
@@ -290,7 +325,8 @@ export const bn: Record<string, string> = {
   Played: "খেলা শেষ",
   "Booking not found": "বুকিং পাওয়া যায়নি",
   "Booking not found.": "বুকিং পাওয়া যায়নি।",
-  "It may have been removed when the demo data was reset.": "ডেমো ডেটা রিসেট করার সময় এটি মুছে যেতে পারে।",
+  "It may have been removed when the demo data was reset.":
+    "ডেমো ডেটা রিসেট করার সময় এটি মুছে যেতে পারে।",
   Back: "ফিরে যান",
   Reschedule: "সময় বদলান",
   "Reschedule booking": "বুকিংয়ের সময় বদলান",
@@ -301,7 +337,8 @@ export const bn: Record<string, string> = {
   "Cancel booking": "বুকিং বাতিল করুন",
   "Cancel {code}": "{code} বাতিল",
   "Keep booking": "বুকিং রাখুন",
-  "Shown to the customer under My Bookings": "কাস্টমার আমার বুকিং-এ দেখতে পাবেন",
+  "Shown to the customer under My Bookings":
+    "কাস্টমার আমার বুকিং-এ দেখতে পাবেন",
   "e.g. Rain, ground closed": "যেমন: বৃষ্টি, মাঠ বন্ধ",
   "{code} cancelled": "{code} বাতিল হয়েছে",
 
@@ -327,19 +364,22 @@ export const bn: Record<string, string> = {
   "{amount}/hr": "{amount}/ঘণ্টা",
   "No kick-off times left on this day.": "এই দিনে আর কোনো সময় খালি নেই।",
   "See the next day": "পরের দিন দেখুন",
-  "{hours} from {time} clashes with {code}.": "{time} থেকে {hours} {code}-এর সাথে মিলে যাচ্ছে।",
+  "{hours} from {time} clashes with {code}.":
+    "{time} থেকে {hours} {code}-এর সাথে মিলে যাচ্ছে।",
 
   /* ── Booking problems (from the store) ── */
   "Someone just booked this slot.": "এইমাত্র কেউ এই স্লট বুক করেছেন।",
   "This court is closed for that time.": "ওই সময় মাঠটি বন্ধ।",
-  "Another player is paying for this slot right now.": "আরেকজন এই মুহূর্তে এই স্লটের পেমেন্ট করছেন।",
+  "Another player is paying for this slot right now.":
+    "আরেকজন এই মুহূর্তে এই স্লটের পেমেন্ট করছেন।",
   "That time has already started.": "এই সময় ইতিমধ্যে শুরু হয়ে গেছে।",
   "The venue is closed at that time.": "ওই সময় মাঠ বন্ধ থাকে।",
   "This court is not taking bookings.": "মাঠটি এখন বুকিং নিচ্ছে না।",
   "Booking failed.": "বুকিং হয়নি।",
   "Could not hold the slot.": "স্লটটি ধরে রাখা যায়নি।",
   "This booking is already cancelled.": "এই বুকিং আগেই বাতিল হয়েছে।",
-  "This transaction ID has already been used for a booking.": "এই ট্রানজেকশন আইডি দিয়ে আগেই একটি বুকিং হয়েছে।",
+  "This transaction ID has already been used for a booking.":
+    "এই ট্রানজেকশন আইডি দিয়ে আগেই একটি বুকিং হয়েছে।",
 
   /* ── Payment pieces ── */
   "Full amount": "পুরো টাকা",
@@ -353,10 +393,13 @@ export const bn: Record<string, string> = {
   "e.g. {id}": "যেমন: {id}",
   Paste: "পেস্ট",
   "Looks right": "ঠিক আছে",
-  "Paste the ID or the whole {method} SMS.": "TrxID অথবা পুরো {method} SMS-টাই পেস্ট করে দিন।",
+  "Paste the ID or the whole {method} SMS.":
+    "TrxID অথবা পুরো {method} SMS-টাই পেস্ট করে দিন।",
   "Enter the transaction ID from the SMS": "SMS-এ পাওয়া TrxID দিন",
-  "A transaction ID is 8–10 letters and numbers": "ট্রানজেকশন আইডি ৮–১০টি অক্ষর ও সংখ্যায় হয়",
-  "This transaction ID has already been used": "এই ট্রানজেকশন আইডি আগেই ব্যবহার হয়েছে",
+  "A transaction ID is 8–10 letters and numbers":
+    "ট্রানজেকশন আইডি ৮–১০টি অক্ষর ও সংখ্যায় হয়",
+  "This transaction ID has already been used":
+    "এই ট্রানজেকশন আইডি আগেই ব্যবহার হয়েছে",
   "Amount (৳)": "পরিমাণ (৳)",
   "Due {amount}": "বাকি {amount}",
   "Collect {amount}": "{amount} আদায় করুন",
@@ -376,9 +419,11 @@ export const bn: Record<string, string> = {
   "Refund later (before kick-off)": "পরে ফেরত (খেলা শুরুর আগে)",
   "Keep the money": "টাকা রেখে দিন",
   "Free cancellation (over {n} hrs before)": "ফ্রি বাতিল ({n} ঘণ্টার বেশি আগে)",
-  "Late cancellation (under {n} hrs before)": "দেরিতে বাতিল ({n} ঘণ্টার কম আগে)",
+  "Late cancellation (under {n} hrs before)":
+    "দেরিতে বাতিল ({n} ঘণ্টার কম আগে)",
   "Cancel & refund {amount}": "বাতিল করুন ও {amount} ফেরত দিন",
-  "{code} cancelled · {amount} refunded": "{code} বাতিল · {amount} ফেরত দেওয়া হয়েছে",
+  "{code} cancelled · {amount} refunded":
+    "{code} বাতিল · {amount} ফেরত দেওয়া হয়েছে",
   "No refunds owed": "ফেরত দেওয়ার কিছু নেই",
   Overpaid: "বেশি পরিশোধ",
 
@@ -398,7 +443,8 @@ export const bn: Record<string, string> = {
   "Venue name and phone are required": "ভেন্যুর নাম ও ফোন দিতে হবে",
   "The hero headline can't be empty": "হিরো শিরোনাম খালি রাখা যাবে না",
   "The ground needs a name": "মাঠের একটি নাম দিন",
-  "Content saved — the site shows it right away": "কনটেন্ট সেভ হয়েছে — সাইটে সঙ্গে সঙ্গে দেখাবে",
+  "Content saved — the site shows it right away":
+    "কনটেন্ট সেভ হয়েছে — সাইটে সঙ্গে সঙ্গে দেখাবে",
   Text: "লেখা",
   Intro: "ভূমিকা",
   "Background photo": "ব্যাকগ্রাউন্ড ছবি",
@@ -450,10 +496,13 @@ export const bn: Record<string, string> = {
   "Hold while paying": "পেমেন্টের সময় স্লট ধরে রাখা",
   "Advance & refunds": "অগ্রিম ও ফেরত",
   "Full refund if cancelled": "বাতিল করলে পুরো টাকা ফেরত",
-  "Before kick-off; later cancellations keep the money by default": "খেলা শুরুর আগে; এর পরে বাতিল হলে সাধারণত টাকা ফেরত হয় না",
-  "Closing time must be after opening time": "বন্ধের সময় খোলার সময়ের পরে হতে হবে",
+  "Before kick-off; later cancellations keep the money by default":
+    "খেলা শুরুর আগে; এর পরে বাতিল হলে সাধারণত টাকা ফেরত হয় না",
+  "Closing time must be after opening time":
+    "বন্ধের সময় খোলার সময়ের পরে হতে হবে",
   "Prices must be above zero": "দাম শূন্যের বেশি হতে হবে",
-  "Settings saved — the booking site uses them right away": "সেটিংস সেভ হয়েছে — বুকিং সাইটে সঙ্গে সঙ্গে কাজ করবে",
+  "Settings saved — the booking site uses them right away":
+    "সেটিংস সেভ হয়েছে — বুকিং সাইটে সঙ্গে সঙ্গে কাজ করবে",
   "৳ / hr": "৳ / ঘণ্টা",
   days: "দিন",
   hours: "ঘণ্টা",

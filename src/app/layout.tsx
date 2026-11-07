@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Hind_Siliguri, Poppins } from "next/font/google";
 import "./globals.css";
 
-import ToastProvider from "../components/turf/ToastProvider";
+import { ToastProvider } from "@/src/components/common/ToastProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -33,7 +33,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${poppins.variable} ${bangla.variable}`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${poppins.variable} ${bangla.variable}`}
+      suppressHydrationWarning
+    >
       <body className="antialiased" suppressHydrationWarning>
         <ToastProvider>
           <main>{children}</main>

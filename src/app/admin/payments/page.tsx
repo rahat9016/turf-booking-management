@@ -1,5 +1,5 @@
-import Payments from "@/src/components/turf/admin/Payments";
+import { Payments } from "@/src/components/admin/payments/Payments";
 
-export default function TurfPaymentsPage() {
+export default function AdminPaymentsPage() {
   return <Payments />;
 }

@@ -1,12 +1,15 @@
-import TurfFooter from "@/src/components/turf/TurfFooter";
-import TurfHeader from "@/src/components/turf/TurfHeader";
+import { SiteFooter, SiteHeader } from "@/src/components/layout";
 
-export default function TurfSiteLayout({ children }: { children: React.ReactNode }) {
+export default function SiteLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <div className="relative">
-      <TurfHeader />
+      <SiteHeader />
       {children}
-      <TurfFooter />
+      <SiteFooter />
     </div>
   );
 }

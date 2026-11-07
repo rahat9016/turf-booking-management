@@ -1,11 +1,31 @@
-import { addDays, slotTime, todayYmd } from "./format";
-import type { Booking, BookingStatus, Court, GalleryImage, PayMethod, Payment, Settings, SiteContent, TurfDB } from "./types";
+import { addDays, slotTime, todayYmd } from "@/src/lib/format";
+import type {
+  Booking,
+  BookingStatus,
+  Court,
+  GalleryImage,
+  PayMethod,
+  Payment,
+  Settings,
+  SiteContent,
+  TurfDB,
+} from "@/src/types";
 
 // Bumped when the seed changes so stored demo data is replaced.
 export const DB_VERSION = 10;
 
 /** Photos in /public/turf the admin can pick for the hero and the ground. */
-export const turfImages = ["hero", "field", "boots", "kickoff", "player", "night-match", "kids", "stadium", "night"].map((n) => `/turf/${n}.webp`);
+export const turfImages = [
+  "hero",
+  "field",
+  "boots",
+  "kickoff",
+  "player",
+  "night-match",
+  "kids",
+  "stadium",
+  "night",
+].map((n) => `/turf/${n}.webp`);
 
 export const defaultContent: SiteContent = {
   heroTitle: "Book Our Football Turf\nin Under a Minute.",
@@ -16,10 +36,30 @@ export const defaultContent: SiteContent = {
   aboutText:
     "One well-kept pitch in Bashundhara, run by people who play on it. Book online in a minute, turn up, and the ground is ready — lines marked, lights on, bibs waiting.",
   services: [
-    { title: "Hourly hire", text: "Your squad, the whole pitch, by the hour. Pick a free time and lock it with a small advance.", detail: "", online: true },
-    { title: "Coaching", text: "Sessions for kids and adults — fitness, passing, finishing and goalkeeping.", detail: "Coach on request", online: false },
-    { title: "Private events", text: "Office matches and birthday games. We block the ground and have it ready when you arrive.", detail: "Evening or full day", online: false },
-    { title: "Tournaments", text: "7-a-side cups with fixtures drawn up and the ground held for every round.", detail: "Ask about dates", online: false },
+    {
+      title: "Hourly hire",
+      text: "Your squad, the whole pitch, by the hour. Pick a free time and lock it with a small advance.",
+      detail: "",
+      online: true,
+    },
+    {
+      title: "Coaching",
+      text: "Sessions for kids and adults — fitness, passing, finishing and goalkeeping.",
+      detail: "Coach on request",
+      online: false,
+    },
+    {
+      title: "Private events",
+      text: "Office matches and birthday games. We block the ground and have it ready when you arrive.",
+      detail: "Evening or full day",
+      online: false,
+    },
+    {
+      title: "Tournaments",
+      text: "7-a-side cups with fixtures drawn up and the ground held for every round.",
+      detail: "Ask about dates",
+      online: false,
+    },
   ],
 };
 
@@ -44,7 +84,12 @@ export const seedGallery: GalleryImage[] = [
   ["kids", "Saturday kids' coaching"],
   ["stadium", "Tournament day"],
   ["boots", "Shock-pad grass up close"],
-].map(([n, title], i) => ({ id: `gl${i + 1}`, src: `/turf/${n}.webp`, title, visible: true }));
+].map(([n, title], i) => ({
+  id: `gl${i + 1}`,
+  src: `/turf/${n}.webp`,
+  title,
+  visible: true,
+}));
 
 /** The venue has a single ground. */
 export const seedCourts: Court[] = [
@@ -61,8 +106,15 @@ export const seedCourts: Court[] = [
     players: "10–14 players",
     rating: 4.9,
     active: true,
-    features: ["LED floodlights", "Changing room", "Free bibs", "Drinking water", "Parking"],
-    description: "Our 7-a-side pitch with shock-pad grass, full-height nets and floodlights for night matches.",
+    features: [
+      "LED floodlights",
+      "Changing room",
+      "Free bibs",
+      "Drinking water",
+      "Parking",
+    ],
+    description:
+      "Our 7-a-side pitch with shock-pad grass, full-height nets and floodlights for night matches.",
   },
 ];
 
@@ -90,9 +142,50 @@ function rng(seed: number) {
   };
 }
 
-const FIRST = ["Rahim", "Tanvir", "Sakib", "Nusrat", "Arif", "Fahim", "Mehedi", "Rafi", "Sadia", "Imran", "Nafis", "Tasnim", "Shuvo", "Asif", "Rakib", "Mim"];
-const LAST = ["Uddin", "Ahmed", "Hasan", "Jahan", "Hossain", "Islam", "Rahman", "Chowdhury", "Karim", "Akter", "Kabir", "Siddique"];
-const TEAMS = ["Bashundhara Blazers", "Office XI", "Gulshan Strikers", "NSU Alumni", "Friday FC", "Code Warriors", "", "", "", ""];
+const FIRST = [
+  "Rahim",
+  "Tanvir",
+  "Sakib",
+  "Nusrat",
+  "Arif",
+  "Fahim",
+  "Mehedi",
+  "Rafi",
+  "Sadia",
+  "Imran",
+  "Nafis",
+  "Tasnim",
+  "Shuvo",
+  "Asif",
+  "Rakib",
+  "Mim",
+];
+const LAST = [
+  "Uddin",
+  "Ahmed",
+  "Hasan",
+  "Jahan",
+  "Hossain",
+  "Islam",
+  "Rahman",
+  "Chowdhury",
+  "Karim",
+  "Akter",
+  "Kabir",
+  "Siddique",
+];
+const TEAMS = [
+  "Bashundhara Blazers",
+  "Office XI",
+  "Gulshan Strikers",
+  "NSU Alumni",
+  "Friday FC",
+  "Code Warriors",
+  "",
+  "",
+  "",
+  "",
+];
 
 /**
  * Demo history around today: games already played, matches being played right now and upcoming
@@ -100,7 +193,7 @@ const TEAMS = ["Bashundhara Blazers", "Office XI", "Gulshan Strikers", "NSU Alum
  */
 export function createSeed(): TurfDB {
   const rand = rng(20261001);
-  const pick = <T,>(xs: T[]) => xs[Math.floor(rand() * xs.length)];
+  const pick = <T>(xs: T[]) => xs[Math.floor(rand() * xs.length)];
   const today = todayYmd();
   const now = Date.now();
   const s = defaultSettings;
@@ -121,29 +214,64 @@ export function createSeed(): TurfDB {
         const duration = Math.min(rand() < 0.3 ? 2 : 1, s.closeHour - h);
         const start = slotTime(date, h);
         const total = (peak ? court.peakPrice : court.price) * duration;
-        const advanceDue = Math.ceil((total * s.advancePercent) / 100 / 10) * 10;
-        const source: Booking["source"] = rand() < 0.75 ? "online" : rand() < 0.5 ? "walk-in" : "phone";
-        const method: PayMethod = source === "online" ? pick(["bkash", "bkash", "nagad", "card"] as PayMethod[]) : "cash";
+        const advanceDue =
+          Math.ceil((total * s.advancePercent) / 100 / 10) * 10;
+        const source: Booking["source"] =
+          rand() < 0.75 ? "online" : rand() < 0.5 ? "walk-in" : "phone";
+        const method: PayMethod =
+          source === "online"
+            ? pick(["bkash", "bkash", "nagad", "card"] as PayMethod[])
+            : "cash";
         // Booked 1–72 hours before kick-off; games further out were booked some time in the last two days.
         const lead = (1 + Math.floor(rand() * 72)) * 3600_000;
-        const created = new Date(start - lead < now ? start - lead : now - (1 + Math.floor(rand() * 47)) * 3600_000).toISOString();
+        const created = new Date(
+          start - lead < now
+            ? start - lead
+            : now - (1 + Math.floor(rand() * 47)) * 3600_000
+        ).toISOString();
 
         // A few bookings are called off; everything else stands.
-        const status: BookingStatus = rand() >= 0.94 ? "cancelled" : "confirmed";
+        const status: BookingStatus =
+          rand() >= 0.94 ? "cancelled" : "confirmed";
 
         const payments: Payment[] = [];
-        const pay = (amount: number, kind: Payment["kind"], m: PayMethod, at: string) =>
-          payments.push({ id: `p${seq}${payments.length}`, amount, kind, method: m, at, ref: m === "cash" ? undefined : `TX${Math.floor(rand() * 1e8)}` });
+        const pay = (
+          amount: number,
+          kind: Payment["kind"],
+          m: PayMethod,
+          at: string
+        ) =>
+          payments.push({
+            id: `p${seq}${payments.length}`,
+            amount,
+            kind,
+            method: m,
+            at,
+            ref: m === "cash" ? undefined : `TX${Math.floor(rand() * 1e8)}`,
+          });
         if (source === "online") pay(advanceDue, "advance", method, created);
-        else if (status !== "cancelled") pay(advanceDue, "advance", "cash", created);
+        else if (status !== "cancelled")
+          pay(advanceDue, "advance", "cash", created);
         // Games already played or under way have had their balance collected at the ground.
-        if (status === "confirmed" && start <= now) pay(total - advanceDue, "balance", rand() < 0.7 ? "cash" : "bkash", new Date(start).toISOString());
+        if (status === "confirmed" && start <= now)
+          pay(
+            total - advanceDue,
+            "balance",
+            rand() < 0.7 ? "cash" : "bkash",
+            new Date(start).toISOString()
+          );
         // Cancelled online bookings: about half refunded already, some kept (late cancellations); upcoming ones
         // left over are still waiting for their refund.
         let refundWaived: true | undefined;
         if (status === "cancelled" && payments.length) {
           const r = rand();
-          if (r < 0.5) pay(advanceDue, "refund", method, new Date(Math.min(now, start)).toISOString());
+          if (r < 0.5)
+            pay(
+              advanceDue,
+              "refund",
+              method,
+              new Date(Math.min(now, start)).toISOString()
+            );
           else if (r < 0.75) refundWaived = true;
         }
 
@@ -155,13 +283,20 @@ export function createSeed(): TurfDB {
           date,
           startHour: h,
           duration,
-          customer: { name, phone: `01${pick(["7", "8", "9", "5", "3"])}${String(Math.floor(rand() * 1e8)).padStart(8, "0")}`, team: pick(TEAMS) || undefined },
+          customer: {
+            name,
+            phone: `01${pick(["7", "8", "9", "5", "3"])}${String(Math.floor(rand() * 1e8)).padStart(8, "0")}`,
+            team: pick(TEAMS) || undefined,
+          },
           total,
           advanceDue,
           payments,
           status,
           source,
-          cancelReason: status === "cancelled" ? pick(["Rain", "Team short of players", "Rescheduled"]) : undefined,
+          cancelReason:
+            status === "cancelled"
+              ? pick(["Rain", "Team short of players", "Rescheduled"])
+              : undefined,
           refundWaived,
           createdAt: created,
           updatedAt: created,
@@ -171,5 +306,10 @@ export function createSeed(): TurfDB {
     }
   }
 
-  return { ...staticState, seeded: true, bookings, seq: { booking: seq, court: seedCourts.length } };
+  return {
+    ...staticState,
+    seeded: true,
+    bookings,
+    seq: { booking: seq, court: seedCourts.length },
+  };
 }
