@@ -94,7 +94,7 @@ export function CancelModal({
               <p
                 className={cn(
                   "text-xs font-medium",
-                  free ? "text-emerald-700" : "text-rose-700"
+                  free ? "text-emerald-700" : "text-red-700"
                 )}
               >
                 {free
@@ -164,7 +164,7 @@ export function CancelModal({
           </button>
           <button
             onClick={confirmCancel}
-            className={cn(abtn.primary, "bg-rose-600 hover:bg-rose-700")}
+            className={cn(abtn.primary, "bg-red-600 hover:bg-red-700")}
           >
             {refundNow
               ? t("Cancel & refund {amount}", { amount: taka(paid) })

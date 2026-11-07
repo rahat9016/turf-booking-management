@@ -50,7 +50,7 @@ export function MoneySummary({
   return (
     <section className={cn(cardClass, "space-y-3 p-4")}>
       {closed && (
-        <p className="rounded-md bg-rose-50 px-3 py-2.5 text-sm text-rose-800">
+        <p className="rounded-md bg-red-50 px-3 py-2.5 text-sm text-red-800">
           {t("Cancelled")}
           {b.cancelReason && <> — {b.cancelReason}</>}
         </p>
@@ -80,7 +80,7 @@ export function MoneySummary({
               className={cn(
                 "flex items-center justify-between border-t px-3 py-3 font-semibold",
                 due > 0
-                  ? "border-rose-100 bg-rose-50 text-rose-800"
+                  ? "border-red-100 bg-red-50 text-red-800"
                   : "border-emerald-100 bg-emerald-50 text-emerald-800"
               )}
             >

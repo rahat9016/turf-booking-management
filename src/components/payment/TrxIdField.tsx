@@ -88,7 +88,7 @@ export function TrxIdField({
         </span>
       </div>
       {error ? (
-        <p className="mt-1.5 text-xs text-rose-600">{error}</p>
+        <p className="mt-1.5 text-xs text-red-600">{error}</p>
       ) : (
         <p id={`${id}-hint`} className="mt-1.5 text-xs text-neutral-500">
           {t("Paste the ID or the whole {method} SMS.", {

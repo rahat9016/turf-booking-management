@@ -15,22 +15,22 @@ const moneyTones = {
   teal: {
     badge: "bg-teal-50 text-teal-600",
     bar: "bg-teal-500",
-    solid: "from-teal-500 to-cyan-700 shadow-cyan-700/20",
+    solid: "from-teal-500 to-emerald-700 shadow-emerald-700/20",
   },
   sky: {
-    badge: "bg-sky-50 text-sky-600",
-    bar: "bg-sky-500",
-    solid: "from-sky-500 to-indigo-600 shadow-indigo-600/20",
+    badge: "bg-blue-50 text-blue-700",
+    bar: "bg-blue-600",
+    solid: "from-blue-600 to-violet-600 shadow-violet-600/20",
   },
   indigo: {
     badge: "bg-indigo-50 text-indigo-600",
     bar: "bg-indigo-500",
-    solid: "from-indigo-500 to-purple-700 shadow-purple-700/20",
+    solid: "from-purple-700 to-indigo-800 shadow-indigo-800/20",
   },
   rose: {
-    badge: "bg-rose-50 text-rose-600",
-    bar: "bg-rose-500",
-    solid: "from-rose-500 via-pink-600 to-fuchsia-700 shadow-pink-600/25",
+    badge: "bg-red-50 text-red-600",
+    bar: "bg-red-500",
+    solid: "from-red-500 to-red-700 shadow-red-700/20",
   },
   violet: {
     badge: "bg-violet-50 text-violet-600",
@@ -38,14 +38,14 @@ const moneyTones = {
     solid: "from-violet-500 via-purple-600 to-indigo-700 shadow-purple-600/25",
   },
   cyan: {
-    badge: "bg-cyan-50 text-cyan-600",
-    bar: "bg-cyan-500",
-    solid: "from-cyan-500 to-blue-600 shadow-blue-600/20",
+    badge: "bg-indigo-50 text-indigo-700",
+    bar: "bg-indigo-600",
+    solid: "from-indigo-600 to-blue-700 shadow-blue-700/20",
   },
   blue: {
     badge: "bg-blue-50 text-blue-600",
     bar: "bg-blue-500",
-    solid: "from-blue-500 to-violet-600 shadow-violet-600/20",
+    solid: "from-violet-600 to-purple-700 shadow-purple-700/20",
   },
   slate: {
     badge: "bg-slate-100 text-slate-600",

@@ -6,7 +6,7 @@ const tileTones: Record<Phase, string> = {
   booked: "bg-emerald-50 text-emerald-700",
   playing: "bg-lime-100 text-lime-800",
   played: "bg-neutral-100 text-neutral-500",
-  cancelled: "bg-rose-50 text-rose-600",
+  cancelled: "bg-red-50 text-red-600",
 };
 
 /** Phone list: match day as a small calendar tile, tinted by status so the list scans at a glance. */

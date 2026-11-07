@@ -28,7 +28,7 @@ export function HoldCountdown({
         <span
           className={cn(
             "font-semibold tabular-nums",
-            urgent ? "text-rose-600" : "text-neutral-900"
+            urgent ? "text-red-600" : "text-neutral-900"
           )}
         >
           {formatDuration(left)}
@@ -38,7 +38,7 @@ export function HoldCountdown({
         <div
           className={cn(
             "h-full rounded-full transition-[width] duration-1000 ease-linear",
-            urgent ? "bg-rose-500" : "bg-emerald-700"
+            urgent ? "bg-red-500" : "bg-emerald-700"
           )}
           style={{ width: `${heldPct}%` }}
         />

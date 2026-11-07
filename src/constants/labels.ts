@@ -21,7 +21,7 @@ export const statusStyles: Record<Phase, string> = {
   booked: "bg-emerald-50 text-emerald-700 ring-emerald-200",
   playing: "bg-lime-100 text-lime-800 ring-lime-300",
   played: "bg-neutral-100 text-neutral-600 ring-neutral-200",
-  cancelled: "bg-rose-50 text-rose-600 ring-rose-200",
+  cancelled: "bg-red-50 text-red-600 ring-red-200",
 };
 
 export const payLabels: Record<PayMethod, string> = {

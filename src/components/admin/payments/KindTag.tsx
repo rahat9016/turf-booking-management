@@ -6,7 +6,7 @@ import { cn } from "@/src/lib/utils";
 import type { PaymentKind } from "@/src/types";
 
 const kindBadge: Record<PaymentKind, string> = {
-  advance: "bg-sky-50 text-sky-700",
+  advance: "bg-blue-50 text-blue-700",
   balance: "bg-emerald-50 text-emerald-700",
   refund: "bg-violet-50 text-violet-700",
 };

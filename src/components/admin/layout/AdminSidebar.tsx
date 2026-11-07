@@ -23,7 +23,7 @@ export function AdminSidebar({
 }) {
   const t = useT();
   const footerLink = cn(
-    "rounded-lg text-sm text-sky-50/70 hover:bg-sky-400/10 hover:text-white",
+    "rounded-lg text-sm text-indigo-50/70 hover:bg-indigo-400/10 hover:text-white",
     rail
       ? "flex flex-col items-center gap-1 px-0.5 py-1.5 text-[10px]"
       : "flex h-11 items-center gap-3 px-4"
@@ -34,7 +34,7 @@ export function AdminSidebar({
       {/* Soft coloured glows behind the menu. */}
       <span
         aria-hidden
-        className="pointer-events-none absolute -left-16 -top-20 size-56 rounded-full bg-sky-400/15 blur-3xl"
+        className="pointer-events-none absolute -left-16 -top-20 size-56 rounded-full bg-indigo-400/15 blur-3xl"
       />
       <span
         aria-hidden
@@ -53,7 +53,7 @@ export function AdminSidebar({
         )}
       >
         {rail ? (
-          <span className="text-xl font-extrabold text-sky-400">
+          <span className="text-xl font-extrabold text-indigo-300">
             T<span className="text-white">H</span>
           </span>
         ) : (
@@ -72,7 +72,7 @@ export function AdminSidebar({
             className={cn(rail && gi > 0 && "border-t border-white/10 pt-2")}
           >
             {!rail && (
-              <p className="px-4 pb-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-sky-300/60">
+              <p className="px-4 pb-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-indigo-300/60">
                 {t(g.title)}
               </p>
             )}
@@ -134,8 +134,8 @@ function SidebarLink({
   const active = isActive(item.href, pathname);
   const badgeTone =
     item.badge === "refunds"
-      ? "bg-indigo-400 text-white"
-      : "bg-sky-400 text-sky-950";
+      ? "bg-violet-400 text-white"
+      : "bg-indigo-400 text-white";
   return (
     <li>
       <Link
@@ -149,16 +149,16 @@ function SidebarLink({
             ? "flex h-16 flex-col items-center justify-center gap-1 px-0.5 text-center"
             : "flex h-12 items-center gap-3 rounded-lg px-2.5 text-[15px]",
           active
-            ? "bg-gradient-to-r from-sky-400/25 to-indigo-400/5 font-semibold text-white ring-1 ring-inset ring-sky-300/25"
-            : "text-white/85 hover:bg-sky-400/10 hover:text-white"
+            ? "bg-gradient-to-r from-indigo-400/25 to-violet-400/5 font-semibold text-white ring-1 ring-inset ring-indigo-300/25"
+            : "text-white/85 hover:bg-indigo-400/10 hover:text-white"
         )}
       >
         <span
           className={cn(
             "relative flex size-8 shrink-0 items-center justify-center rounded-lg transition",
             active
-              ? "bg-gradient-to-br from-sky-500 to-indigo-600 text-white shadow-md"
-              : "bg-white/[0.07] text-sky-300 ring-1 ring-white/10"
+              ? "bg-gradient-to-br from-indigo-500 to-violet-600 text-white shadow-md"
+              : "bg-white/[0.07] text-indigo-300 ring-1 ring-white/10"
           )}
         >
           <item.icon className="size-[18px]" />

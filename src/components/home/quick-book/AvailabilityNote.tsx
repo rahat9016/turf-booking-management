@@ -29,7 +29,7 @@ export function AvailabilityNote({
       aria-live="polite"
       className={cn(
         "flex items-start gap-2 rounded-lg px-3.5 py-3 text-sm",
-        check.ok ? "bg-lime-50 text-emerald-900" : "bg-rose-50 text-rose-700"
+        check.ok ? "bg-lime-50 text-emerald-900" : "bg-red-50 text-red-700"
       )}
     >
       {check.ok ? (

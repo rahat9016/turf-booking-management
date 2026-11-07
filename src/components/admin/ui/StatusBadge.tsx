@@ -11,7 +11,7 @@ const statusDots: Record<Phase, string> = {
   booked: "bg-emerald-500",
   playing: "bg-lime-500 animate-pulse",
   played: "bg-neutral-400",
-  cancelled: "bg-rose-500",
+  cancelled: "bg-red-500",
 };
 
 export function StatusBadge({

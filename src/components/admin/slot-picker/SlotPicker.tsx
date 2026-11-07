@@ -224,7 +224,7 @@ export function SlotPicker({
           )
         )}
         {conflict && start !== null && (
-          <p className="mt-3 rounded-lg bg-rose-50 px-3.5 py-3 text-sm text-rose-700">
+          <p className="mt-3 rounded-lg bg-red-50 px-3.5 py-3 text-sm text-red-700">
             {conflict.kind === "booking"
               ? t("{hours} from {time} clashes with {code}.", {
                   hours: t(duration === 1 ? "{n} hr" : "{n} hrs", {

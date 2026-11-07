@@ -127,7 +127,7 @@ function OpeningHours() {
         <span
           className={cn(
             "size-2 rounded-full",
-            !hydrated ? "bg-white/30" : open ? "bg-lime-400" : "bg-rose-400"
+            !hydrated ? "bg-white/30" : open ? "bg-lime-400" : "bg-red-400"
           )}
         />
         {!hydrated

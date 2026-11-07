@@ -61,7 +61,7 @@ export function LookupForm({
         className={cn(
           "mt-5 flex items-center gap-2 rounded-lg bg-white p-2 shadow-2xl shadow-black/30 ring-2 transition",
           error
-            ? "ring-rose-400"
+            ? "ring-red-400"
             : "ring-transparent focus-within:ring-white/40"
         )}
       >
@@ -93,7 +93,7 @@ export function LookupForm({
         id="mb-hint"
         className={cn(
           "mt-3 text-center text-sm",
-          error ? "text-rose-300" : "text-white/50"
+          error ? "text-red-300" : "text-white/50"
         )}
       >
         {error

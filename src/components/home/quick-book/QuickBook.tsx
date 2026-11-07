@@ -145,7 +145,7 @@ export function QuickBook() {
                 <span
                   className={cn(
                     "text-sm font-medium",
-                    freeCount ? "text-emerald-700" : "text-rose-600"
+                    freeCount ? "text-emerald-700" : "text-red-600"
                   )}
                 >
                   {freeCount

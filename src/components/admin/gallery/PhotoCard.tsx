@@ -158,7 +158,7 @@ export function PhotoCard({
             <button
               onClick={onRemove}
               aria-label={t("Delete photo")}
-              className={cn(iconBtn, "hover:text-rose-600")}
+              className={cn(iconBtn, "hover:text-red-600")}
             >
               <Trash2 className="size-4" />
             </button>

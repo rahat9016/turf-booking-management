@@ -34,7 +34,7 @@ export function RevenueChart({
       figure={taka(total)}
       table={data.map((d) => [d.label, taka(d.amount)])}
       icon={TrendingUp}
-      accent="from-sky-500 to-blue-600"
+      accent="from-indigo-600 to-blue-700"
     >
       <ResponsiveContainer width="100%" height="100%">
         <AreaChart
@@ -43,12 +43,12 @@ export function RevenueChart({
         >
           <defs>
             <linearGradient id="revenue-fill" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#3b82f6" stopOpacity={0.3} />
+              <stop offset="0%" stopColor="#6366f1" stopOpacity={0.28} />
               <stop offset="100%" stopColor="#6366f1" stopOpacity={0} />
             </linearGradient>
             <linearGradient id="revenue-line" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stopColor="#0ea5e9" />
-              <stop offset="100%" stopColor="#4f46e5" />
+              <stop offset="0%" stopColor="#4f46e5" />
+              <stop offset="100%" stopColor="#7c3aed" />
             </linearGradient>
           </defs>
           <CartesianGrid
@@ -90,7 +90,7 @@ export function RevenueChart({
               r: 5,
               strokeWidth: 2,
               stroke: "#fff",
-              fill: "#2563eb",
+              fill: "#4f46e5",
             }}
             animationDuration={900}
           />

@@ -50,7 +50,7 @@ export function StartTimeGrid({
               lit
                 ? "bg-emerald-800 text-white disabled:cursor-default"
                 : isSelected
-                  ? "bg-rose-50 text-rose-600 ring-1 ring-rose-300"
+                  ? "bg-red-50 text-red-600 ring-1 ring-red-300"
                   : ok
                     ? "bg-neutral-100 text-neutral-800 hover:bg-emerald-50 hover:ring-1 hover:ring-emerald-500"
                     : "bg-neutral-50 text-neutral-300 line-through"

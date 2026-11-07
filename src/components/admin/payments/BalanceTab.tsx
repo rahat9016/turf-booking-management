@@ -22,7 +22,7 @@ const variants = {
     empty: "Nothing due",
     action: "Collect",
     param: "pay",
-    tone: "text-rose-700",
+    tone: "text-red-700",
   },
   refund: {
     icon: Undo2,

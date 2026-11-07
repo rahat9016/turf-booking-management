@@ -12,7 +12,7 @@ export function PayShort({ b }: { b: Booking }) {
   const due = dueOf(b);
   if (due > 0)
     return (
-      <span className="shrink-0 font-medium tabular-nums text-rose-700">
+      <span className="shrink-0 font-medium tabular-nums text-red-700">
         {t("{amount} due", { amount: taka(due) })}
       </span>
     );
@@ -39,8 +39,8 @@ export function PayLine({ b }: { b: Booking }) {
       : due === 0
         ? [t("Paid in full"), "text-emerald-700"]
         : paid > 0
-          ? [t("{amount} due", { amount: taka(due) }), "text-rose-700"]
-          : [t("Not paid"), "text-rose-700"];
+          ? [t("{amount} due", { amount: taka(due) }), "text-red-700"]
+          : [t("Not paid"), "text-red-700"];
   return (
     <div className="whitespace-nowrap">
       <p className="font-medium tabular-nums text-neutral-900">

@@ -41,15 +41,15 @@ export function BusyHoursChart({
       figure={hrs(total)}
       table={data.map((d) => [hourLabel(d.hour), hrs(d.games)])}
       icon={Clock}
-      accent="from-indigo-500 to-violet-600"
+      accent="from-violet-600 to-purple-700"
       legend={
         <>
           <LegendItem
-            swatch="from-sky-300 to-sky-500"
+            swatch="from-indigo-300 to-indigo-500"
             label={t("Off-peak")}
           />
           <LegendItem
-            swatch="from-indigo-400 to-indigo-600"
+            swatch="from-purple-400 to-purple-700"
             label={t("Peak from {time}", { time: hourLabel(peakStartHour) })}
           />
         </>
@@ -68,19 +68,19 @@ export function BusyHoursChart({
           />
           <defs>
             <linearGradient id="bar-offpeak" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#7dd3fc" />
-              <stop offset="100%" stopColor="#0ea5e9" />
+              <stop offset="0%" stopColor="#a5b4fc" />
+              <stop offset="100%" stopColor="#6366f1" />
             </linearGradient>
             <linearGradient id="bar-peak" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#818cf8" />
-              <stop offset="100%" stopColor="#4f46e5" />
+              <stop offset="0%" stopColor="#c084fc" />
+              <stop offset="100%" stopColor="#7e22ce" />
             </linearGradient>
           </defs>
           {firstPeak && (
             <ReferenceArea
               x1={firstPeak.label}
               x2={lastLabel}
-              fill="#6366f1"
+              fill="#a855f7"
               fillOpacity={0.06}
             />
           )}
