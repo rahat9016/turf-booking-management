@@ -12,7 +12,7 @@ import { focusRing } from "../ui";
 const collectBtn = cn(
   "inline-flex h-8 items-center gap-1.5 whitespace-nowrap rounded-md px-3 text-xs font-semibold shadow-sm transition active:scale-[0.98]",
   focusRing,
-  "border border-neutral-300 bg-white text-neutral-800 shadow-none hover:border-emerald-400 hover:text-emerald-800"
+  "border border-neutral-300 bg-white text-neutral-800 shadow-none hover:border-indigo-400 hover:text-indigo-800"
 );
 
 /** The one thing the desk most likely wants to do next: take the rest of the money at the ground. */

@@ -40,7 +40,7 @@ export function SlotPanel({
     >
       <dl>
         <InfoRow icon={Hash} label="Booking">
-          <span className="font-mono font-semibold text-emerald-800">
+          <span className="font-mono font-semibold text-indigo-800">
             {b.code}
           </span>
         </InfoRow>

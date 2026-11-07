@@ -13,7 +13,7 @@ export function CustomerPanel({ b }: { b: Booking }) {
           <InfoRow icon={Phone} label="Phone">
             <a
               href={`tel:${b.customer.phone}`}
-              className="font-medium text-emerald-700 hover:underline"
+              className="font-medium text-indigo-700 hover:underline"
             >
               {b.customer.phone}
             </a>
@@ -23,7 +23,7 @@ export function CustomerPanel({ b }: { b: Booking }) {
           <InfoRow icon={Mail} label="Email">
             <a
               href={`mailto:${b.customer.email}`}
-              className="break-all font-medium text-emerald-700 hover:underline"
+              className="break-all font-medium text-indigo-700 hover:underline"
             >
               {b.customer.email}
             </a>

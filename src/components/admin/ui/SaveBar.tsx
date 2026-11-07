@@ -20,14 +20,14 @@ export function SaveBar({
       className={cn(
         "sticky bottom-0 flex items-center justify-between gap-2 rounded-b-md border-t px-3 py-2.5 backdrop-blur sm:px-6 sm:py-3",
         dirty
-          ? "border-emerald-200 bg-emerald-50/95"
+          ? "border-indigo-200 bg-indigo-50/95"
           : "border-neutral-100 bg-white/95"
       )}
     >
       <p
         className={cn(
           "min-w-0 truncate text-[13px] sm:text-sm",
-          dirty ? "font-medium text-emerald-900" : "text-neutral-500"
+          dirty ? "font-medium text-indigo-900" : "text-neutral-500"
         )}
       >
         {dirty ? tr("You have unsaved changes.") : tr("All changes saved")}

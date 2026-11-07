@@ -49,10 +49,10 @@ export function LanguageSwitch({
             lang === value
               ? dark
                 ? "bg-lime-400 text-emerald-950"
-                : "bg-emerald-700 text-white"
+                : "bg-indigo-600 text-white"
               : dark
                 ? "text-white/80 hover:text-white"
-                : "text-neutral-600 hover:text-emerald-700"
+                : "text-neutral-600 hover:text-indigo-600"
           )}
         >
           {label}

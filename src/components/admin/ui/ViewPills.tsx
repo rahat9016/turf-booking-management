@@ -48,8 +48,8 @@ export function ViewPills<T extends string>({
                 "inline-flex h-9 shrink-0 items-center gap-1.5 whitespace-nowrap rounded-md border px-3 text-sm font-medium transition",
                 focusRing,
                 selected
-                  ? "border-emerald-700 bg-emerald-700 text-white"
-                  : "border-neutral-200 bg-white text-neutral-700 hover:border-emerald-300 hover:text-emerald-800"
+                  ? "border-indigo-700 bg-indigo-700 text-white"
+                  : "border-neutral-200 bg-white text-neutral-700 hover:border-indigo-300 hover:text-indigo-800"
               )}
             >
               {tr(v.label)}

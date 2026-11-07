@@ -18,7 +18,7 @@ export function Section({
   return (
     <section className={cardClass}>
       <h2 className="flex items-center gap-3 border-b border-neutral-100 px-4 py-3.5 font-semibold text-neutral-900 sm:px-5">
-        <span className="flex size-7 items-center justify-center rounded-full bg-emerald-700 text-xs font-bold text-white">
+        <span className="flex size-7 items-center justify-center rounded-full bg-indigo-700 text-xs font-bold text-white">
           {n}
         </span>
         {t(title)}

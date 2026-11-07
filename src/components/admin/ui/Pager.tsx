@@ -5,7 +5,7 @@ import { useT } from "@/src/lib/i18n";
 import { cn } from "@/src/lib/utils";
 
 const navBtn =
-  "flex size-8 items-center justify-center rounded-md border border-neutral-200 hover:border-emerald-400 disabled:opacity-40";
+  "flex size-8 items-center justify-center rounded-md border border-neutral-200 hover:border-indigo-400 disabled:opacity-40";
 
 /** "1–20 of 57 bookings" with page buttons; takes the result of `usePagination`. */
 export function Pager({
@@ -58,8 +58,8 @@ export function Pager({
                 className={cn(
                   "size-8 rounded-md text-xs font-medium",
                   n === page
-                    ? "bg-emerald-700 text-white"
-                    : "border border-neutral-200 hover:border-emerald-400"
+                    ? "bg-indigo-700 text-white"
+                    : "border border-neutral-200 hover:border-indigo-400"
                 )}
               >
                 {n}

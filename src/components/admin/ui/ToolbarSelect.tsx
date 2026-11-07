@@ -32,7 +32,7 @@ export function ToolbarSelect<T extends string>({
           control,
           "w-full appearance-none pl-3 pr-9 lg:w-auto",
           active &&
-            "border-emerald-500 bg-emerald-50 font-medium text-emerald-900"
+            "border-indigo-500 bg-indigo-50 font-medium text-indigo-900"
         )}
       >
         {options.map((o) => (

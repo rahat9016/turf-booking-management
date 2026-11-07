@@ -57,7 +57,7 @@ export function AdminSidebar({
             T<span className="text-white">H</span>
           </span>
         ) : (
-          <TurfLogo />
+          <TurfLogo className="text-indigo-300" />
         )}
       </Link>
       <div

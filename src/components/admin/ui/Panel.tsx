@@ -25,7 +25,7 @@ export function Panel({
     <section className={cn(cardClass, "p-4 sm:p-5", className)}>
       <div className="mb-3 flex items-center justify-between gap-2">
         <h2 className="flex items-center gap-2 font-semibold text-neutral-900">
-          {Icon && <Icon className="size-4.5 text-emerald-700" />}
+          {Icon && <Icon className="size-4.5 text-indigo-700" />}
           {tr(title)}
         </h2>
         {action}

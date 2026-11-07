@@ -49,7 +49,7 @@ export function Tabs<T extends string>({
                 className={cn(
                   "rounded-md px-1.5 text-[11px] tabular-nums",
                   selected
-                    ? "bg-emerald-700 text-white"
+                    ? "bg-indigo-700 text-white"
                     : "bg-neutral-100 text-neutral-500"
                 )}
               >
@@ -57,7 +57,7 @@ export function Tabs<T extends string>({
               </span>
             )}
             {selected && (
-              <span className="absolute inset-x-2 bottom-0 h-0.5 rounded-full bg-emerald-600" />
+              <span className="absolute inset-x-2 bottom-0 h-0.5 rounded-full bg-indigo-600" />
             )}
           </button>
         );

@@ -24,14 +24,14 @@ export function AdminUserMenu({
   const t = useT();
   return (
     <DropdownMenu modal={false}>
-      <DropdownMenuTrigger className="flex items-center gap-2 rounded-md outline-none focus-visible:ring-2 focus-visible:ring-emerald-200">
+      <DropdownMenuTrigger className="flex items-center gap-2 rounded-md outline-none focus-visible:ring-2 focus-visible:ring-indigo-200">
         <span className="hidden text-right md:block">
           <span className="block text-sm font-semibold text-neutral-900">
             {t("Front Desk")}
           </span>
           <span className="block text-xs text-neutral-500">{venueName}</span>
         </span>
-        <span className="flex size-10 items-center justify-center rounded-full bg-emerald-900 text-sm font-bold text-lime-300">
+        <span className="flex size-10 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-violet-600 text-sm font-bold text-white">
           FD
         </span>
       </DropdownMenuTrigger>

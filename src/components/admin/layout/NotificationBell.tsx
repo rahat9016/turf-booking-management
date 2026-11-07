@@ -74,7 +74,7 @@ export function NotificationBell() {
             ? t("Notifications ({n} unread)", { n: unread })
             : t("Notifications")
         }
-        className="relative flex size-10 shrink-0 items-center justify-center rounded-full border border-neutral-200 bg-white text-neutral-700 transition hover:text-emerald-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-200"
+        className="relative flex size-10 shrink-0 items-center justify-center rounded-full border border-neutral-200 bg-white text-neutral-700 transition hover:text-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-200"
       >
         {unread ? (
           <BellRing className="size-5 origin-top animate-[bell-ring_1.2s_ease-in-out_2]" />
@@ -139,7 +139,7 @@ export function NotificationBell() {
         </div>
 
         {permission === "default" && (
-          <div className="flex items-center justify-between gap-3 border-b border-neutral-100 bg-emerald-50 px-4 py-2.5 text-[13px] text-emerald-900">
+          <div className="flex items-center justify-between gap-3 border-b border-neutral-100 bg-indigo-50 px-4 py-2.5 text-[13px] text-indigo-900">
             <span>
               {t("Get alerts even when this tab is in the background.")}
             </span>
@@ -172,13 +172,13 @@ export function NotificationBell() {
                   onClick={() => openItem(n)}
                   className={cn(
                     "flex w-full items-start gap-3 px-4 py-3 text-left transition hover:bg-neutral-50",
-                    !n.read && "bg-emerald-50/50"
+                    !n.read && "bg-indigo-50/50"
                   )}
                 >
                   <span
                     className={cn(
                       "mt-1.5 size-2 shrink-0 rounded-full",
-                      n.read ? "bg-transparent" : "bg-emerald-600"
+                      n.read ? "bg-transparent" : "bg-indigo-600"
                     )}
                     aria-hidden
                   />

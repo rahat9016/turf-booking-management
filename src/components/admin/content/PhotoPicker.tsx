@@ -27,7 +27,7 @@ export function PhotoPicker({
           className={cn(
             "overflow-hidden rounded-md ring-2 ring-offset-2 transition",
             value === src
-              ? "ring-emerald-600"
+              ? "ring-indigo-600"
               : "ring-transparent hover:ring-neutral-300"
           )}
         >

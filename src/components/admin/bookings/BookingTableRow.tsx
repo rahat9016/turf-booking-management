@@ -38,7 +38,7 @@ export function BookingTableRow({
               href={href}
               onClick={(e) => e.stopPropagation()}
               className={cn(
-                "block truncate rounded-sm font-medium text-neutral-900 hover:text-emerald-800",
+                "block truncate rounded-sm font-medium text-neutral-900 hover:text-indigo-800",
                 focusRing
               )}
             >
@@ -55,7 +55,7 @@ export function BookingTableRow({
         <p className="flex items-center gap-1.5 whitespace-nowrap text-neutral-900">
           {dateLabel(b.date)}
           {b.date === today && b.status !== "cancelled" && (
-            <span className="rounded bg-emerald-50 px-1.5 text-[11px] font-medium text-emerald-700">
+            <span className="rounded bg-indigo-50 px-1.5 text-[11px] font-medium text-indigo-700">
               {t("Today")}
             </span>
           )}
@@ -75,7 +75,7 @@ export function BookingTableRow({
         <div className="flex items-center justify-end gap-2">
           <RowAction b={b} phase={phase} />
           <ChevronRight
-            className="size-4 text-neutral-400 transition group-hover:translate-x-0.5 group-hover:text-emerald-700"
+            className="size-4 text-neutral-400 transition group-hover:translate-x-0.5 group-hover:text-indigo-700"
             aria-hidden
           />
         </div>

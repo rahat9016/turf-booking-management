@@ -22,7 +22,7 @@ import { cn } from "@/src/lib/utils";
 import type { GalleryImage } from "@/src/types";
 
 const iconBtn =
-  "flex size-8 items-center justify-center rounded-full bg-white/90 text-neutral-700 shadow-sm backdrop-blur transition hover:bg-white hover:text-emerald-700 disabled:opacity-40";
+  "flex size-8 items-center justify-center rounded-full bg-white/90 text-neutral-700 shadow-sm backdrop-blur transition hover:bg-white hover:text-indigo-700 disabled:opacity-40";
 const menuItem = "cursor-pointer py-2.5";
 
 /** One gallery photo. Phones: every action in one menu button; with a mouse: a row of buttons on hover. */

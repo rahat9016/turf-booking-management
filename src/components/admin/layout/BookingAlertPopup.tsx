@@ -49,10 +49,10 @@ export function BookingAlertPopup() {
   return (
     <Modal open onClose={acknowledgeAll} title={t("New booking")}>
       <div className="flex flex-col items-center text-center">
-        <span className="relative flex size-16 items-center justify-center rounded-full bg-emerald-50 text-emerald-700">
+        <span className="relative flex size-16 items-center justify-center rounded-full bg-indigo-50 text-indigo-700">
           <span
             aria-hidden
-            className="absolute inset-0 animate-ping rounded-full bg-emerald-200/60"
+            className="absolute inset-0 animate-ping rounded-full bg-indigo-200/60"
           />
           <BellRing className="relative size-8 origin-top animate-[bell-ring_1.2s_ease-in-out_infinite]" />
         </span>
@@ -85,7 +85,7 @@ export function BookingAlertPopup() {
       )}
 
       {more > 0 && (
-        <p className="mt-3 text-center text-[13px] font-medium text-emerald-800">
+        <p className="mt-3 text-center text-[13px] font-medium text-indigo-800">
           {t("+{n} more new bookings", { n: more })}
         </p>
       )}

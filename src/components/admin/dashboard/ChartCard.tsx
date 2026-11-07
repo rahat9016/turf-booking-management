@@ -25,7 +25,7 @@ export function ChartCard({
   /** Rows for the hidden data table: [label, value]. */
   table: [string, string][];
   icon: IconType;
-  /** Gradient classes for the icon chip and the top edge, e.g. "from-emerald-500 to-teal-500". */
+  /** Gradient classes for the icon chip and the top edge, e.g. "from-indigo-500 to-teal-500". */
   accent: string;
   /** Key under the header, for charts with more than one colour. */
   legend?: ReactNode;
