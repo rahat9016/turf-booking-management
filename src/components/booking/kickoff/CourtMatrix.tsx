@@ -25,7 +25,7 @@ export function CourtMatrix({
   const courts = db.courts.filter((c) => c.active);
   const hours = hoursOf(db.settings);
   return (
-    <div className="rounded-3xl border border-neutral-200 bg-white p-4">
+    <div className="rounded-lg border border-neutral-200 bg-white p-4">
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
         <p className="font-semibold text-neutral-900">
           {dateLabel(day, { weekday: "long", day: "numeric", month: "long" })}

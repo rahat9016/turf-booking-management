@@ -101,7 +101,7 @@ function AboutPhoto({
       <img
         src={src}
         alt={alt}
-        className="aspect-[3/4] w-full rounded-2xl object-cover"
+        className="aspect-[3/4] w-full rounded-lg object-cover"
       />
       <figcaption className="mt-3 text-sm text-neutral-500">
         <span className="font-medium text-neutral-900">{title}</span> — {text}

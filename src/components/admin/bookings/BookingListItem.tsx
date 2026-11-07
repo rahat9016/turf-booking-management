@@ -32,7 +32,7 @@ export function BookingListItem({ b, phase }: { b: Booking; phase: Phase }) {
             </p>
             <span
               className={cn(
-                "inline-flex max-w-[50%] shrink-0 truncate rounded-full px-2 py-0.5 text-[11px] font-semibold ring-1 ring-inset",
+                "inline-flex max-w-[50%] shrink-0 truncate rounded px-2 py-0.5 text-[11px] font-semibold ring-1 ring-inset",
                 statusStyles[phase]
               )}
             >

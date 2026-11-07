@@ -15,7 +15,7 @@ export function DateTile({ b, phase }: { b: Booking; phase: Phase }) {
     <span
       aria-hidden
       className={cn(
-        "flex size-11 shrink-0 flex-col items-center justify-center rounded-xl leading-none",
+        "flex size-11 shrink-0 flex-col items-center justify-center rounded-lg leading-none",
         tileTones[phase]
       )}
     >

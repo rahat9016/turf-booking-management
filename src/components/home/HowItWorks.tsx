@@ -70,7 +70,7 @@ export function HowItWorks() {
 
 function StepCard({ step: s, index: i }: { step: HowStep; index: number }) {
   return (
-    <li className="group flex flex-col rounded-3xl border border-neutral-200 bg-white p-5 transition duration-500 hover:-translate-y-1 hover:border-emerald-900 hover:bg-emerald-950 hover:shadow-xl hover:shadow-emerald-950/20 motion-reduce:hover:translate-y-0">
+    <li className="group flex flex-col rounded-lg border border-neutral-200 bg-white p-5 transition duration-500 hover:-translate-y-1 hover:border-emerald-900 hover:bg-emerald-950 hover:shadow-xl hover:shadow-emerald-950/20 motion-reduce:hover:translate-y-0">
       <div className="flex items-center justify-between">
         <span className="flex size-10 items-center justify-center rounded-full bg-lime-400 text-emerald-950 transition duration-500 group-hover:rotate-[360deg] motion-reduce:group-hover:rotate-0">
           <s.icon className="size-5" />

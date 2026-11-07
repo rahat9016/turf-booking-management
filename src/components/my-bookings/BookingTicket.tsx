@@ -31,7 +31,7 @@ export function BookingTicket({ b, now }: { b: Booking; now: number }) {
   const ended = endMs(b) <= now;
 
   return (
-    <article className="relative grid overflow-hidden rounded-3xl bg-white ring-1 ring-neutral-200 md:grid-cols-[1fr_15rem]">
+    <article className="relative grid overflow-hidden rounded-lg bg-white ring-1 ring-neutral-200 md:grid-cols-[1fr_15rem]">
       <div className="p-6 md:p-8">
         {/* Status and countdown only matter until the game is over. */}
         {!ended && (

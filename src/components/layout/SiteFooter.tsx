@@ -36,7 +36,7 @@ export function SiteFooter() {
               </Link>
               <a
                 href={tel}
-                className="inline-flex h-11 items-center gap-2 rounded-full px-5 text-sm font-medium text-white ring-1 ring-white/20 transition hover:bg-white/10"
+                className="inline-flex h-11 items-center gap-2 rounded-md px-5 text-sm font-medium text-white ring-1 ring-white/20 transition hover:bg-white/10"
               >
                 <Phone className="size-4" /> {t("Call us")}
               </a>

@@ -48,7 +48,7 @@ export function SiteHeader() {
                   pathname === ROUTES.home
                   ? "bg-transparent ring-transparent"
                   : "bg-white/[0.06] ring-white/15 backdrop-blur-xl backdrop-saturate-150",
-            glass && "h-16 rounded-2xl px-3 ring-1 md:px-4"
+            glass && "h-16 rounded-lg px-3 ring-1 md:px-4"
           )}
         >
           <Link href={ROUTES.home} aria-label={t("TurfHub home")}>
@@ -61,7 +61,7 @@ export function SiteHeader() {
                 key={l.href}
                 href={l.href}
                 className={cn(
-                  "rounded-full px-4 py-2 text-sm transition",
+                  "rounded-md px-4 py-2 text-sm transition",
                   l.href === pathname
                     ? "bg-white text-emerald-950"
                     : "text-white/80 hover:bg-white/10 hover:text-white"
@@ -76,7 +76,7 @@ export function SiteHeader() {
             <LanguageSwitch dark />
             <a
               href={telHref(settings.phone)}
-              className="hidden items-center gap-2 rounded-full bg-white py-1 pl-4 pr-1 text-sm font-medium text-emerald-950 sm:flex"
+              className="hidden items-center gap-2 rounded-md bg-white py-1 pl-4 pr-1 text-sm font-medium text-emerald-950 sm:flex"
             >
               {t("Contact")}
               <span className="flex size-8 items-center justify-center rounded-full bg-emerald-800 text-white">
@@ -85,7 +85,7 @@ export function SiteHeader() {
             </a>
             <Link
               href={ROUTES.book}
-              className="hidden h-10 items-center rounded-full bg-lime-400 px-5 text-sm font-semibold text-emerald-950 hover:bg-lime-300 md:flex"
+              className="hidden h-10 items-center rounded-md bg-lime-400 px-5 text-sm font-semibold text-emerald-950 hover:bg-lime-300 md:flex"
             >
               {t("Book now")}
             </Link>
@@ -124,7 +124,7 @@ function MobileMenu({
   return (
     <nav
       className={cn(
-        "absolute top-full mx-auto mt-2 grid max-w-7xl gap-1 rounded-2xl bg-emerald-950/95 p-2 shadow-xl shadow-black/30 ring-1 ring-white/15 backdrop-blur-xl lg:hidden",
+        "absolute top-full mx-auto mt-2 grid max-w-7xl gap-1 rounded-lg bg-emerald-950/95 p-2 shadow-xl shadow-black/30 ring-1 ring-white/15 backdrop-blur-xl lg:hidden",
         glass ? "inset-x-3 md:inset-x-6" : "inset-x-3"
       )}
     >
@@ -133,7 +133,7 @@ function MobileMenu({
           key={l.href}
           href={l.href}
           onClick={onClose}
-          className="rounded-xl px-4 py-3 text-sm text-white hover:bg-white/10"
+          className="rounded-lg px-4 py-3 text-sm text-white hover:bg-white/10"
         >
           {t(l.label)}
         </Link>
@@ -141,7 +141,7 @@ function MobileMenu({
       <Link
         href={ROUTES.admin}
         onClick={onClose}
-        className="rounded-xl px-4 py-3 text-sm text-lime-300 hover:bg-white/10"
+        className="rounded-lg px-4 py-3 text-sm text-lime-300 hover:bg-white/10"
       >
         {t("Admin panel")}
       </Link>

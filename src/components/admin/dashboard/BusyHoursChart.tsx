@@ -41,11 +41,11 @@ export function BusyHoursChart({
       figure={hrs(total)}
       table={data.map((d) => [hourLabel(d.hour), hrs(d.games)])}
       icon={Clock}
-      accent="from-sky-500 to-indigo-600"
+      accent="from-indigo-500 to-violet-600"
       legend={
         <>
           <LegendItem
-            swatch="from-teal-300 to-teal-500"
+            swatch="from-sky-300 to-sky-500"
             label={t("Off-peak")}
           />
           <LegendItem
@@ -68,8 +68,8 @@ export function BusyHoursChart({
           />
           <defs>
             <linearGradient id="bar-offpeak" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#5eead4" />
-              <stop offset="100%" stopColor="#14b8a6" />
+              <stop offset="0%" stopColor="#7dd3fc" />
+              <stop offset="100%" stopColor="#0ea5e9" />
             </linearGradient>
             <linearGradient id="bar-peak" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stopColor="#818cf8" />

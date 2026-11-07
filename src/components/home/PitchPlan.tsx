@@ -7,7 +7,7 @@ export function PitchPlan({ dims }: { dims?: string }) {
   const [length, width] = (dims ?? "").replace(/ ft$/, "").split(" × ");
   const tr = useT();
   return (
-    <div className="rounded-2xl bg-emerald-900 p-5">
+    <div className="rounded-lg bg-emerald-900 p-5">
       <svg
         viewBox="0 0 234 120"
         className="w-full text-white/80"

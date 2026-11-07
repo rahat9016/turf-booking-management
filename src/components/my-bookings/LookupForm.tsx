@@ -36,7 +36,7 @@ export function LookupForm({
       <div
         role="tablist"
         aria-label={tr("Look up by")}
-        className="mx-auto flex w-fit rounded-full bg-white/[0.07] p-1 ring-1 ring-white/10"
+        className="mx-auto flex w-fit rounded-md bg-white/[0.07] p-1 ring-1 ring-white/10"
       >
         {MODES.map(([k, l]) => (
           <button
@@ -46,7 +46,7 @@ export function LookupForm({
             aria-selected={mode === k}
             onClick={() => onMode(k)}
             className={cn(
-              "rounded-full px-5 py-2 text-sm font-medium transition",
+              "rounded px-5 py-2 text-sm font-medium transition",
               mode === k
                 ? "bg-white text-emerald-950"
                 : "text-white/70 hover:text-white"
@@ -59,7 +59,7 @@ export function LookupForm({
 
       <div
         className={cn(
-          "mt-5 flex items-center gap-2 rounded-2xl bg-white p-2 shadow-2xl shadow-black/30 ring-2 transition",
+          "mt-5 flex items-center gap-2 rounded-lg bg-white p-2 shadow-2xl shadow-black/30 ring-2 transition",
           error
             ? "ring-rose-400"
             : "ring-transparent focus-within:ring-white/40"

@@ -30,7 +30,7 @@ export function LanguageSwitch({
       role="radiogroup"
       aria-label="Language / ভাষা"
       className={cn(
-        "flex h-9 shrink-0 items-center rounded-full p-0.5 text-xs font-semibold sm:h-10 sm:p-1 sm:text-[13px]",
+        "flex h-9 shrink-0 items-center rounded-md p-0.5 text-xs font-semibold sm:h-10 sm:p-1 sm:text-[13px]",
         dark
           ? "bg-white/10 ring-1 ring-white/20"
           : "border border-neutral-200 bg-white",
@@ -45,7 +45,7 @@ export function LanguageSwitch({
           aria-checked={lang === value}
           onClick={() => setLang(value)}
           className={cn(
-            "h-7.5 rounded-full px-2.5 transition sm:h-8 sm:px-3",
+            "h-7.5 rounded px-2.5 transition sm:h-8 sm:px-3",
             lang === value
               ? dark
                 ? "bg-lime-400 text-emerald-950"

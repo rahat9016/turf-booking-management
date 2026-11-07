@@ -26,7 +26,7 @@ export function Dashboard() {
           value={s.month}
           hint={t("Net takings so far")}
           icon="wallet"
-          tone="green"
+          tone="cyan"
           index={0}
           solid
         />
@@ -35,7 +35,7 @@ export function Dashboard() {
           value={String(s.todayGames)}
           hint={t("{n} still to play", { n: s.gamesLeft })}
           icon={CalendarCheck2}
-          tone="teal"
+          tone="sky"
           index={1}
           solid
         />
@@ -44,7 +44,7 @@ export function Dashboard() {
           value={`${s.occupancy}%`}
           hint={t("{a} of {b} hours", { a: s.bookedHours, b: s.openHours })}
           icon={Gauge}
-          tone="sky"
+          tone="blue"
           index={2}
           solid
         />

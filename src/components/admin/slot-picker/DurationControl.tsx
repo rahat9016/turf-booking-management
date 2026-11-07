@@ -31,7 +31,7 @@ export function DurationControl({
       {/* Phones: label on its own line and the four lengths share the full width. */}
       <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
         <p className="text-sm font-medium text-neutral-800">{t("Duration")}</p>
-        <div className="grid h-11 grid-cols-4 gap-1 rounded-xl bg-neutral-100 p-1 sm:flex sm:h-10">
+        <div className="grid h-11 grid-cols-4 gap-1 rounded-lg bg-neutral-100 p-1 sm:flex sm:h-10">
           {PRESETS.map((d) => {
             const on = !custom && d === value;
             return (
@@ -72,7 +72,7 @@ export function DurationControl({
         </div>
       </div>
       {custom && (
-        <div className="mt-2 flex items-center justify-between gap-3 rounded-xl bg-neutral-50 px-3 py-2">
+        <div className="mt-2 flex items-center justify-between gap-3 rounded-lg bg-neutral-50 px-3 py-2">
           <p className="text-sm text-neutral-600">{t("Hours")}</p>
           <div className="flex items-center gap-2">
             <button

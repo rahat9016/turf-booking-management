@@ -82,7 +82,7 @@ export function NotificationBell() {
           <Bell className="size-5" />
         )}
         {unread > 0 && (
-          <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-rose-600 px-1 text-[11px] font-bold tabular-nums text-white ring-2 ring-white">
+          <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded bg-rose-600 px-1 text-[11px] font-bold tabular-nums text-white ring-2 ring-white">
             {unread > 9 ? "9+" : unread}
           </span>
         )}
@@ -93,7 +93,7 @@ export function NotificationBell() {
         align="end"
         sideOffset={10}
         collisionPadding={12}
-        className="w-[calc(100vw-1.5rem)] max-w-96 overflow-hidden rounded-xl bg-white p-0 sm:w-96"
+        className="w-[calc(100vw-1.5rem)] max-w-96 overflow-hidden rounded-lg bg-white p-0 sm:w-96"
       >
         <div className="flex items-center justify-between gap-2 border-b border-neutral-100 px-4 py-3">
           <p className="font-semibold text-neutral-900">{t("Notifications")}</p>

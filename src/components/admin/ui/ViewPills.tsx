@@ -45,7 +45,7 @@ export function ViewPills<T extends string>({
               aria-pressed={selected}
               onClick={() => onChange(v.value)}
               className={cn(
-                "inline-flex h-9 shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full border px-3 text-sm font-medium transition",
+                "inline-flex h-9 shrink-0 items-center gap-1.5 whitespace-nowrap rounded-md border px-3 text-sm font-medium transition",
                 focusRing,
                 selected
                   ? "border-emerald-700 bg-emerald-700 text-white"
@@ -56,7 +56,7 @@ export function ViewPills<T extends string>({
               {v.count !== undefined && (
                 <span
                   className={cn(
-                    "min-w-6 rounded-full px-1.5 text-center text-[13px] font-semibold tabular-nums leading-5",
+                    "min-w-6 rounded px-1.5 text-center text-[13px] font-semibold tabular-nums leading-5",
                     selected
                       ? "bg-white/20 text-white"
                       : "bg-neutral-100 text-neutral-700"

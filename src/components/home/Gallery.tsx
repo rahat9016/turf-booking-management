@@ -21,7 +21,7 @@ export function Gallery() {
         {photos.map((g) => (
           <li
             key={g.id}
-            className="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-100"
+            className="group relative aspect-[4/3] overflow-hidden rounded-lg bg-neutral-100"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img

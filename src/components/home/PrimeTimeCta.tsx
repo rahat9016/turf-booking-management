@@ -13,7 +13,7 @@ export function PrimeTimeCta() {
   const tr = useT();
   return (
     <section className="mx-auto max-w-7xl px-4 pb-12 md:px-8 md:pb-20">
-      <div className="relative overflow-hidden rounded-3xl bg-emerald-900 px-6 py-10 md:px-14 md:py-24">
+      <div className="relative overflow-hidden rounded-lg bg-emerald-900 px-6 py-10 md:px-14 md:py-24">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/turf/night.webp"

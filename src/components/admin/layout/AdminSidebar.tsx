@@ -23,7 +23,7 @@ export function AdminSidebar({
 }) {
   const t = useT();
   const footerLink = cn(
-    "rounded-lg text-sm text-emerald-50/70 hover:bg-emerald-400/10 hover:text-white",
+    "rounded-lg text-sm text-sky-50/70 hover:bg-sky-400/10 hover:text-white",
     rail
       ? "flex flex-col items-center gap-1 px-0.5 py-1.5 text-[10px]"
       : "flex h-11 items-center gap-3 px-4"
@@ -34,15 +34,15 @@ export function AdminSidebar({
       {/* Soft coloured glows behind the menu. */}
       <span
         aria-hidden
-        className="pointer-events-none absolute -left-16 -top-20 size-56 rounded-full bg-emerald-400/15 blur-3xl"
+        className="pointer-events-none absolute -left-16 -top-20 size-56 rounded-full bg-sky-400/15 blur-3xl"
       />
       <span
         aria-hidden
-        className="pointer-events-none absolute -right-20 top-1/3 size-56 rounded-full bg-teal-400/10 blur-3xl"
+        className="pointer-events-none absolute -right-20 top-1/3 size-56 rounded-full bg-indigo-400/15 blur-3xl"
       />
       <span
         aria-hidden
-        className="pointer-events-none absolute -bottom-16 -left-10 size-56 rounded-full bg-teal-400/10 blur-3xl"
+        className="pointer-events-none absolute -bottom-16 -left-10 size-56 rounded-full bg-violet-500/15 blur-3xl"
       />
       <Link
         href={ROUTES.adminDashboard}
@@ -53,7 +53,7 @@ export function AdminSidebar({
         )}
       >
         {rail ? (
-          <span className="text-xl font-extrabold text-emerald-400">
+          <span className="text-xl font-extrabold text-sky-400">
             T<span className="text-white">H</span>
           </span>
         ) : (
@@ -72,7 +72,7 @@ export function AdminSidebar({
             className={cn(rail && gi > 0 && "border-t border-white/10 pt-2")}
           >
             {!rail && (
-              <p className="px-4 pb-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-emerald-300/60">
+              <p className="px-4 pb-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-sky-300/60">
                 {t(g.title)}
               </p>
             )}
@@ -135,7 +135,7 @@ function SidebarLink({
   const badgeTone =
     item.badge === "refunds"
       ? "bg-indigo-400 text-white"
-      : "bg-emerald-400 text-emerald-950";
+      : "bg-sky-400 text-sky-950";
   return (
     <li>
       <Link
@@ -147,25 +147,25 @@ function SidebarLink({
           "rounded-md text-sm transition",
           rail
             ? "flex h-16 flex-col items-center justify-center gap-1 px-0.5 text-center"
-            : "flex h-12 items-center gap-3 rounded-xl px-2.5 text-[15px]",
+            : "flex h-12 items-center gap-3 rounded-lg px-2.5 text-[15px]",
           active
-            ? "bg-gradient-to-r from-emerald-400/25 to-teal-400/5 font-semibold text-white ring-1 ring-inset ring-emerald-300/25"
-            : "text-white/85 hover:bg-emerald-400/10 hover:text-white"
+            ? "bg-gradient-to-r from-sky-400/25 to-indigo-400/5 font-semibold text-white ring-1 ring-inset ring-sky-300/25"
+            : "text-white/85 hover:bg-sky-400/10 hover:text-white"
         )}
       >
         <span
           className={cn(
             "relative flex size-8 shrink-0 items-center justify-center rounded-lg transition",
             active
-              ? "bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-md"
-              : "bg-white/[0.07] text-emerald-300 ring-1 ring-white/10"
+              ? "bg-gradient-to-br from-sky-500 to-indigo-600 text-white shadow-md"
+              : "bg-white/[0.07] text-sky-300 ring-1 ring-white/10"
           )}
         >
           <item.icon className="size-[18px]" />
           {rail && count > 0 && (
             <span
               className={cn(
-                "absolute -right-2 -top-1.5 min-w-4 rounded-full px-1 text-center text-[9px] font-bold leading-4 tabular-nums",
+                "absolute -right-2 -top-1.5 min-w-4 rounded px-1 text-center text-[9px] font-bold leading-4 tabular-nums",
                 badgeTone
               )}
             >

@@ -81,7 +81,7 @@ export function AdminShell({ children }: { children: ReactNode }) {
     <div className="min-h-screen bg-neutral-50 print:bg-white">
       <aside
         className={cn(
-          "fixed inset-y-0 left-0 z-30 hidden bg-gradient-to-b from-emerald-900 via-emerald-950 to-teal-950 transition-[width] duration-200 lg:block print:hidden",
+          "fixed inset-y-0 left-0 z-30 hidden bg-gradient-to-b from-blue-950 via-indigo-950 to-slate-950 transition-[width] duration-200 lg:block print:hidden",
           compact ? "w-20" : "w-72"
         )}
       >
@@ -99,7 +99,7 @@ export function AdminShell({ children }: { children: ReactNode }) {
             className="absolute inset-0 bg-black/50"
             onClick={close}
           />
-          <aside className="absolute inset-y-0 left-0 w-72 bg-gradient-to-b from-emerald-900 via-emerald-950 to-teal-950">
+          <aside className="absolute inset-y-0 left-0 w-72 bg-gradient-to-b from-blue-950 via-indigo-950 to-slate-950">
             <button
               onClick={close}
               aria-label={t("Close menu")}
@@ -134,7 +134,7 @@ export function AdminShell({ children }: { children: ReactNode }) {
             onClick={toggleCompact}
             aria-label={compact ? t("Expand sidebar") : t("Collapse sidebar")}
             title={compact ? t("Expand sidebar") : t("Collapse sidebar")}
-            className={cn(topBtn, "hidden hover:text-emerald-700 lg:flex")}
+            className={cn(topBtn, "hidden hover:text-indigo-600 lg:flex")}
           >
             {compact ? (
               <PanelLeftOpen className="size-5" />

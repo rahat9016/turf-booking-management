@@ -18,7 +18,7 @@ export function DurationSegments({
     // Phones: label on its own line and the lengths share the full width, so longer (Bangla) labels never wrap.
     <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
       <p className="text-sm font-medium text-neutral-800">{tr("Duration")}</p>
-      <div className="flex h-10 gap-1 rounded-xl bg-neutral-100 p-1">
+      <div className="flex h-10 gap-1 rounded-lg bg-neutral-100 p-1">
         {Array.from({ length: max }, (_, i) => i + 1).map((d) => (
           <button
             key={d}

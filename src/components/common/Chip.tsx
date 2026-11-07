@@ -17,7 +17,7 @@ export function Chip({
       onClick={onClick}
       aria-pressed={active}
       className={cn(
-        "inline-flex h-9 shrink-0 items-center gap-1.5 rounded-full px-4 text-xs font-medium transition",
+        "inline-flex h-9 shrink-0 items-center gap-1.5 rounded-md px-4 text-xs font-medium transition",
         active
           ? "bg-emerald-800 text-white"
           : dark

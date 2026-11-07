@@ -9,7 +9,7 @@ export function LiveBadge({ now, dark }: { now: number; dark?: boolean }) {
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-medium",
+        "inline-flex items-center gap-2 rounded px-3 py-1 text-xs font-medium",
         dark
           ? "bg-white/10 text-white ring-1 ring-white/15"
           : "bg-emerald-50 text-emerald-800 ring-1 ring-emerald-200"

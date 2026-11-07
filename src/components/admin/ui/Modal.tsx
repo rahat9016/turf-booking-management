@@ -62,7 +62,7 @@ export function Modal({
         ref={panel}
         tabIndex={-1}
         className={cn(
-          "relative flex max-h-[92dvh] w-full flex-col overflow-clip rounded-t-2xl bg-white shadow-2xl outline-none animate-in slide-in-from-bottom duration-200 sm:max-h-[90vh] sm:rounded-2xl sm:slide-in-from-bottom-0 sm:zoom-in-95",
+          "relative flex max-h-[92dvh] w-full flex-col overflow-clip rounded-t-lg bg-white shadow-2xl outline-none animate-in slide-in-from-bottom duration-200 sm:max-h-[90vh] sm:rounded-lg sm:slide-in-from-bottom-0 sm:zoom-in-95",
           wide ? "max-w-2xl" : "max-w-md",
           className
         )}

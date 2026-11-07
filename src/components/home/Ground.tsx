@@ -69,7 +69,7 @@ function LiveGroundPhoto({ ground }: { ground: Court }) {
 
   return (
     <figure>
-      <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-emerald-950">
+      <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-emerald-950">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={ground.image}

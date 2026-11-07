@@ -41,7 +41,7 @@ export function DateCalendar({
       <PopoverTrigger asChild>{children}</PopoverTrigger>
       <PopoverContent
         align="end"
-        className="w-auto rounded-2xl border-neutral-200 bg-white p-3 shadow-xl"
+        className="w-auto rounded-lg border-neutral-200 bg-white p-3 shadow-xl"
       >
         <DayPicker
           mode="single"

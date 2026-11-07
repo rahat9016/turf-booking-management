@@ -28,7 +28,7 @@ export function AvailabilityNote({
       transition={{ duration: 0.25, ease: EASE }}
       aria-live="polite"
       className={cn(
-        "flex items-start gap-2 rounded-xl px-3.5 py-3 text-sm",
+        "flex items-start gap-2 rounded-lg px-3.5 py-3 text-sm",
         check.ok ? "bg-lime-50 text-emerald-900" : "bg-rose-50 text-rose-700"
       )}
     >

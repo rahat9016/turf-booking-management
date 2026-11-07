@@ -71,7 +71,7 @@ export function Hero() {
             </Link>
             <a
               href="#how-it-works"
-              className="inline-flex h-11 items-center rounded-full px-5 text-sm font-medium text-white ring-1 ring-white/30 hover:bg-white/10"
+              className="inline-flex h-11 items-center rounded-md px-5 text-sm font-medium text-white ring-1 ring-white/30 hover:bg-white/10"
             >
               {tr("How booking works")}
             </a>

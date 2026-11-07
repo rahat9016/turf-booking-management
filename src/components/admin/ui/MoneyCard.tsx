@@ -20,12 +20,12 @@ const moneyTones = {
   sky: {
     badge: "bg-sky-50 text-sky-600",
     bar: "bg-sky-500",
-    solid: "from-sky-500 to-blue-700 shadow-blue-700/20",
+    solid: "from-sky-500 to-indigo-600 shadow-indigo-600/20",
   },
   indigo: {
     badge: "bg-indigo-50 text-indigo-600",
     bar: "bg-indigo-500",
-    solid: "from-indigo-500 to-violet-700 shadow-indigo-700/20",
+    solid: "from-indigo-500 to-purple-700 shadow-purple-700/20",
   },
   rose: {
     badge: "bg-rose-50 text-rose-600",
@@ -36,6 +36,16 @@ const moneyTones = {
     badge: "bg-violet-50 text-violet-600",
     bar: "bg-violet-500",
     solid: "from-violet-500 via-purple-600 to-indigo-700 shadow-purple-600/25",
+  },
+  cyan: {
+    badge: "bg-cyan-50 text-cyan-600",
+    bar: "bg-cyan-500",
+    solid: "from-cyan-500 to-blue-600 shadow-blue-600/20",
+  },
+  blue: {
+    badge: "bg-blue-50 text-blue-600",
+    bar: "bg-blue-500",
+    solid: "from-blue-500 to-violet-600 shadow-violet-600/20",
   },
   slate: {
     badge: "bg-slate-100 text-slate-600",
@@ -78,7 +88,7 @@ export function StatCard({
   return (
     <section
       className={cn(
-        "group relative flex min-h-32 min-w-0 flex-col overflow-hidden rounded-xl p-3 transition hover:-translate-y-0.5 sm:min-h-40 sm:p-5",
+        "group relative flex min-h-32 min-w-0 flex-col overflow-hidden rounded-lg p-3 transition hover:-translate-y-0.5 sm:min-h-40 sm:p-5",
         solid
           ? cn(
               "bg-gradient-to-br text-white shadow-lg hover:shadow-xl",

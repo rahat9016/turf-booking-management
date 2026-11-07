@@ -46,7 +46,7 @@ export function StartTimeGrid({
             aria-pressed={isSelected || lit}
             aria-label={`${hourLabel(h)}${ok ? "" : `, ${tr("taken")}`}${peak ? `, ${tr("peak rate")}` : ""}`}
             className={cn(
-              "relative h-11 rounded-xl text-sm font-medium transition disabled:cursor-not-allowed",
+              "relative h-11 rounded-lg text-sm font-medium transition disabled:cursor-not-allowed",
               lit
                 ? "bg-emerald-800 text-white disabled:cursor-default"
                 : isSelected

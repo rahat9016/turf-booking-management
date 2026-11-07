@@ -49,7 +49,7 @@ export function PhotoCard({
     <article className="group min-w-0">
       <div
         className={cn(
-          "relative aspect-[4/3] overflow-hidden rounded-xl bg-neutral-100",
+          "relative aspect-[4/3] overflow-hidden rounded-lg bg-neutral-100",
           !g.visible &&
             "outline-dashed outline-2 outline-offset-2 outline-neutral-300"
         )}
@@ -64,11 +64,11 @@ export function PhotoCard({
             !g.visible && "opacity-40 grayscale"
           )}
         />
-        <span className="absolute left-2 top-2 rounded-full bg-black/55 px-2 py-0.5 text-[11px] font-semibold text-white backdrop-blur">
+        <span className="absolute left-2 top-2 rounded bg-black/55 px-2 py-0.5 text-[11px] font-semibold text-white backdrop-blur">
           {index + 1}
         </span>
         {!g.visible && (
-          <span className="absolute inset-x-0 top-1/2 mx-auto w-fit -translate-y-1/2 rounded-full bg-neutral-900/80 px-2.5 py-1 text-xs font-semibold text-white">
+          <span className="absolute inset-x-0 top-1/2 mx-auto w-fit -translate-y-1/2 rounded bg-neutral-900/80 px-2.5 py-1 text-xs font-semibold text-white">
             {t("Hidden")}
           </span>
         )}

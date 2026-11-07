@@ -88,12 +88,12 @@ export function QuickBook() {
   };
 
   return (
-    <div className="w-full min-w-0 rounded-3xl bg-white/10 p-4 ring-1 ring-white/20 backdrop-blur-md">
+    <div className="w-full min-w-0 rounded-lg bg-white/10 p-4 ring-1 ring-white/20 backdrop-blur-md">
       <motion.div
         initial={false}
         animate={{ height: bodyHeight || "auto" }}
         transition={{ duration: reduceMotion ? 0 : 0.35, ease: EASE }}
-        className="overflow-hidden rounded-2xl bg-white"
+        className="overflow-hidden rounded-lg bg-white"
       >
         <div ref={bodyRef} className="space-y-5 p-5">
           <div role="group" aria-labelledby="qb-date">
@@ -155,7 +155,7 @@ export function QuickBook() {
               )}
             </div>
             {hours.length === 0 && (
-              <p className="rounded-xl bg-neutral-50 px-3 py-3 text-sm text-neutral-600">
+              <p className="rounded-lg bg-neutral-50 px-3 py-3 text-sm text-neutral-600">
                 {tr("No start times left today.")}{" "}
                 <button
                   onClick={() => setDate(addDays(todayYmd(), 1))}
@@ -193,7 +193,7 @@ export function QuickBook() {
       </motion.div>
       <button
         onClick={go}
-        className="mt-4 h-13 w-full rounded-2xl bg-white text-base font-semibold text-emerald-950 transition hover:bg-lime-300"
+        className="mt-4 h-13 w-full rounded-lg bg-white text-base font-semibold text-emerald-950 transition hover:bg-lime-300"
       >
         {check?.ok
           ? tr("Book {time}", { time: rangeLabel(hour, duration) })
